@@ -1,0 +1,141 @@
+.community {
+    width: auto;color: var(--color-white);padding: var(--padding-xs) var(--padding-lg);font-family: var(--font-roboto);
+    padding-bottom: 80px;
+}
+.community .communityc {
+    width: 100%;    
+}
+.community .header {
+    color: var(--color-white);margin: 15px auto;text-align: center;
+}
+.community .cearn {
+    width: 100%;
+}
+.community .cearn .cearnc {
+    background-color: var(--color-dimgray);border-radius: var(--br-3xs);
+    display: flex;margin: 12px auto;flex-direction: row;align-items: center;padding-top: 0;padding-bottom: 8px;
+    justify-content: flex-start;font-size: var(--font-size-2xs);font-weight: 600;
+}
+.community .cearn .cearnc .img {
+    width: 80px;height: 100px;margin-top: -5px;
+}
+.community .cearn .cearnc .el {
+    display: flex;flex-direction: row;justify-content: flex-start;font-size: var(--font-size-2xs) !important;
+}
+.community .cearn .cearnc .el .img1 {
+    width: 20px;margin-top: -5px;
+}
+.community .mbonuses {
+    width: 100%;margin: auto;text-align: center;
+}
+.community .mbonuses > div {
+    width: 100%;
+}
+.community .mbonuses > div button {
+    color: var(--color-sandybrown);text-align: center;margin: 10px auto;
+    border: none;background-color: transparent;background-color: none;text-decoration: underline;
+    font-size: var(--font-size-xs);
+}
+.community .mbonuses .bonuseslist {
+    width: 100%;text-align: left;margin-left: 0;
+}
+.community .mbonuses .bonuseslist h3 {
+    font-size: var(--font-size-xs);text-align: left;margin-left: 8%;
+}
+.community .mbonuses .bonuseslist .blisthead {
+    display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;
+    align-items: center;color: var(--color-gray-300);font-size: var(--font-size-xs);
+}
+.community .mbonuses .bonuseslist .blisthead div {
+    text-align: left;margin: auto;
+}
+.community .mbonuses .bonuseslist .blistcon {
+    width: 100%;
+}
+.community .mbonuses .bonuseslist .blistcon div {
+    display: flex;flex-direction: row;align-items: center;justify-content: space-evenly;
+}
+.community .mbonuses .bonuseslist .blistcon .bcon {
+    background-color: var(--color-dimgray);border-radius: var(--br-3xs);
+    margin: 12px 0;
+}
+.community .mbonuses .bonuseslist .blistcon .bcon .lvlname {
+    font-size: var(--font-size-xs);
+}
+.community .mbonuses .bonuseslist .blistcon .bcon .lvl {
+    color: var(--color-lightgreen);font-size: var(--font-size-xs);
+}
+.community .mbonuses .bonuseslist .blistcon div .img0 {
+    width: 60px;margin-top: -5px;
+}
+.community .mbonuses .bonuseslist .blistcon div .img1 {
+    width: 20px;margin-top: -2px;
+}
+.community .reflist {
+    margin: 40px 0;width: 100%;
+}
+.community .mbonuses .bonuseslist .blistcon {
+    width: 100%;
+}
+.community .reflist .reflistmainc {
+    width: 100%;
+}
+.community .reflist .reflistmainc .refcon {
+    background-color: var(--color-dimgray);border-radius: var(--br-3xs);
+    margin: 12px auto 12px auto;
+    display: flex;flex-direction: row;text-align: left;
+    align-items: center;justify-content: space-between;
+}
+.community .reflist .reflistmainc .refcon .refcona {
+    display: flex;flex-direction: row;align-items: center;justify-content: flex-start;
+}
+.community .reflist .reflistmainc .refcon .refcona .refdet {
+    font-size: var(--font-size-xs);
+    text-align: left !important;width: 100%;align-items: flex-start !important;
+}
+.community .reflist .reflistmainc .refcon .refdet .refname {
+    text-align: left !important;margin-left: 0 !important;
+    width: 100%;padding-left: 0 !important;
+}
+.community .reflist .reflistmainc .refcon .refcona .refdet .lvlname {
+    font-size: var(--font-size-xs);
+}
+.community .reflist .reflistmainc .refcon .refcona .refdet .reflvl {
+    color: var(--color-lightgreen);font-size: var(--font-size-xs);
+    justify-content: flex-start;display: flex;flex-direction: row;
+}
+.community .reflist .reflistmainc .refcon .refimg {
+    width: 60px;height: 60px;margin: auto;text-align: center;align-items: center;
+    align-self: center;padding: 0;padding-bottom: 10px;
+}
+.community .reflist .reflistmainc .refcon .img1 {
+    width: 20px;margin-top: -5px;
+}
+.community .reflist .reflistmainc .refcon .refconb {
+    display: flex;flex-direction: row;align-items: center;justify-content: flex-start;margin-right: 10px;
+}
+.community .reflink {
+    width: 100%;
+} 
+.community .reflist h3, .community .reflink h3 {
+    font-size: var(--font-size-xs);
+} 
+.community .reflink input {
+    width: 95%;background-color: var(--color-dimgreen);border-radius: var(--br-3xs);
+    padding: var(--padding-xs) var(--padding-4xs);font-size: var(--font-size-xs);
+    color: var(--color-white);
+}
+.community .refbtns {
+    width: 100%;margin: 10px 0;
+}
+.community .reflink button.sharebtn {
+    background-color: var(--color-dimgreen);border-radius: var(--br-3xs);
+    padding: var(--padding-xs) var(--padding-4xs);font-size: var(--font-size-xs);
+    color: var(--color-white);border: none;width: 80%;align-self: flex-start;
+}
+.community .reflink button.copybtn {
+    background-color: var(--color-dimgreen);border-radius: var(--br-3xs);
+    padding: var(--padding-xs) var(--padding-4xs);font-size: var(--font-size-xs);
+    color: var(--color-white);border: none;width: 18%;align-self: flex-end;margin-left: 2%;
+}
+

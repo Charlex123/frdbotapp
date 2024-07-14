@@ -1,0 +1,29 @@
+.airdrop {
+    width: auto;color: var(--color-white);padding: var(--padding-xs) var(--padding-lg);font-family: var(--font-roboto);
+    padding-bottom: 80px;
+}
+.airdrop .airdropc {
+    width: 100%;    
+}
+.airdrop .header {
+    color: var(--color-white);margin: 15px auto;text-align: center;
+}
+.airdrop .header h2 {
+    font-size: var(--font-size-21xl);
+}
+.airdrop .airdroplink {
+    width: 100%;
+} 
+.airdrop .airdroplist h3, .airdrop .airdroplink h3 {
+    font-size: var(--font-size-xs);
+}
+.airdrop .airdropbtns {
+    width: 100%;margin: 10px 0;
+}
+.airdrop .airdroplink button.sharebtn {
+    background-color: var(--color-dimgreen);border-radius: var(--br-3xs);
+    padding: var(--padding-xs) var(--padding-4xs);font-size: var(--font-size-lg);
+    color: var(--color-white);border: none;width: 100%;align-self: flex-start;
+    font-weight: 600;
+}
+

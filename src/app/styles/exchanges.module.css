@@ -1,0 +1,148 @@
+.exchanges {
+    width: auto;color: var(--color-white);padding: var(--padding-xs) var(--padding-lg);font-family: var(--font-roboto);
+    top: 0;bottom: 0;left: 0;right: 0;height: 100vh;width: auto;
+    position: fixed;background-color: var(--color-dark-bg);z-index: 9999;
+}
+.exchanges .close {
+    position: absolute;right: 2%;font-size: var(--font-size-lg);
+}
+.exchanges .exchangesc {
+    width: 100%;    
+}
+.exchanges .header {
+    color: var(--color-white);margin: 15px auto;text-align: center;
+}
+.exchanges .header h2 {
+    font-size: var(--font-size-5xl);
+}
+.exchanges .cearn {
+    width: 100%;
+}
+.exchanges .cearn .cearnc {
+    background-color: var(--color-dimgray);border-radius: var(--br-3xs);
+    display: flex;margin: 12px auto;flex-direction: row;align-items: center;padding-top: 0;padding-bottom: 8px;
+    justify-content: flex-start;font-size: var(--font-size-2xs);font-weight: 600;
+}
+.exchanges .cearn .cearnc .img {
+    width: 80px;height: 100px;margin-top: -5px;
+}
+.exchanges .cearn .cearnc .el {
+    display: flex;flex-direction: row;justify-content: flex-start;font-size: var(--font-size-2xs) !important;
+}
+.exchanges .cearn .cearnc .el .img1 {
+    width: 20px;margin-top: -5px;
+}
+.exchanges .mbonuses {
+    width: 100%;margin: auto;text-align: center;
+}
+.exchanges .mbonuses > div {
+    width: 100%;
+}
+.exchanges .mbonuses > div button {
+    color: var(--color-sandybrown);text-align: center;margin: 10px auto;
+    border: none;background-color: transparent;background-color: none;text-decoration: underline;
+    font-size: var(--font-size-xs);
+}
+.exchanges .mbonuses .bonuseslist {
+    width: 100%;text-align: left;margin-left: 0;
+}
+.exchanges .mbonuses .bonuseslist h3 {
+    font-size: var(--font-size-xs);text-align: left;margin-left: 8%;
+}
+.exchanges .mbonuses .bonuseslist .blisthead {
+    display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;
+    align-items: center;color: var(--color-gray-300);font-size: var(--font-size-xs);
+}
+.exchanges .mbonuses .bonuseslist .blisthead div {
+    text-align: left;margin: auto;
+}
+.exchanges .mbonuses .bonuseslist .blistcon {
+    width: 100%;
+}
+.exchanges .mbonuses .bonuseslist .blistcon div {
+    display: flex;flex-direction: row;align-items: center;justify-content: space-evenly;
+}
+.exchanges .mbonuses .bonuseslist .blistcon .bcon {
+    background-color: var(--color-dimgray);border-radius: var(--br-3xs);
+    margin: 12px 0;
+}
+.exchanges .mbonuses .bonuseslist .blistcon .bcon .lvlname {
+    font-size: var(--font-size-xs);
+}
+.exchanges .mbonuses .bonuseslist .blistcon .bcon .lvl {
+    color: var(--color-lightgreen);font-size: var(--font-size-xs);
+}
+.exchanges .mbonuses .bonuseslist .blistcon div .img0 {
+    width: 60px;margin-top: -5px;
+}
+.exchanges .mbonuses .bonuseslist .blistcon div .img1 {
+    width: 20px;margin-top: -2px;
+}
+.exchanges .exchangeslist {
+    margin: 40px 0;width: 100%;
+}
+.exchanges .mbonuses .bonuseslist .blistcon {
+    width: 100%;
+}
+.exchanges .exchangeslist .exchangeslistmainc {
+    width: 100%;
+}
+.exchanges .exchangeslist .exchangeslistmainc .exchangescon {
+    background-color: var(--color-dimgray);border-radius: var(--br-11xl);
+    margin: 12px auto 12px auto;
+    display: flex;flex-direction: row;text-align: left;
+    align-items: center;justify-content: space-between;
+}
+.exchanges .exchangeslist .exchangeslistmainc .exchangescon .exchangescona {
+    display: flex;flex-direction: row;align-items: center;justify-content: flex-start;
+}
+.exchanges .exchangeslist .exchangeslistmainc .exchangescon .exchangescona .exchangesdet {
+    font-size: var(--font-size-xs);
+    text-align: left !important;width: 100%;align-items: flex-start !important;
+}
+.exchanges .exchangeslist .exchangeslistmainc .exchangescon .exchangesdet .exchangesname {
+    text-align: left !important;margin-left: 0 !important;
+    width: 100%;padding-left: 0 !important;
+}
+.exchanges .exchangeslist .exchangeslistmainc .exchangescon .exchangescona .exchangesdet .lvlname {
+    font-size: var(--font-size-xs);
+}
+.exchanges .exchangeslist .exchangeslistmainc .exchangescon .exchangescona .exchangesdet .exchangeslvl {
+    color: var(--color-lightgreen);font-size: var(--font-size-xs);
+    justify-content: flex-start;display: flex;flex-direction: row;
+}
+.exchanges .exchangeslist .exchangeslistmainc .exchangescon .exchangesimg {
+    width: 40px;height: 40px;margin: auto;text-align: center;align-items: center;
+    align-self: center;padding: 0;padding-bottom: 5px;
+}
+.exchanges .exchangeslist .exchangeslistmainc .exchangescon .img1 {
+    width: 20px;margin-top: -5px;
+}
+.exchanges .exchangeslist .exchangeslistmainc .exchangescon .exchangesconb {
+    display: flex;flex-direction: row;align-items: center;justify-content: flex-start;margin-right: 10px;
+}
+.exchanges .exchangeslink {
+    width: 100%;
+} 
+.exchanges .exchangeslist h3, .exchanges .exchangeslink h3 {
+    font-size: var(--font-size-xs);
+} 
+.exchanges .exchangeslink input {
+    width: 95%;background-color: var(--color-dimgreen);border-radius: var(--br-3xs);
+    padding: var(--padding-xs) var(--padding-4xs);font-size: var(--font-size-xs);
+    color: var(--color-white);
+}
+.exchanges .exchangesbtns {
+    width: 100%;margin: 10px 0;
+}
+.exchanges .exchangeslink button.sharebtn {
+    background-color: var(--color-dimgreen);border-radius: var(--br-3xs);
+    padding: var(--padding-xs) var(--padding-4xs);font-size: var(--font-size-xs);
+    color: var(--color-white);border: none;width: 80%;align-self: flex-start;
+}
+.exchanges .exchangeslink button.copybtn {
+    background-color: var(--color-dimgreen);border-radius: var(--br-3xs);
+    padding: var(--padding-xs) var(--padding-4xs);font-size: var(--font-size-xs);
+    color: var(--color-white);border: none;width: 18%;align-self: flex-end;margin-left: 2%;
+}
+

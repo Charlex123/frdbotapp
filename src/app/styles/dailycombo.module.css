@@ -1,0 +1,100 @@
+  .dailyCombo {
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 110%;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 65px;
+    z-index: 4;
+  }
+  .dailyComboWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    justify-content: space-between;
+    /* padding: var(--padding-3xs) 0 0; */
+  }
+  .dailyCombo {
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 110%;
+    font-weight: 600;
+    font-size: var(--font-size-xs);
+    display: inline-block;
+    min-width: 65px;
+    color: var(--color-white);
+    padding-left: var(--padding-9xs);
+    z-index: 4;
+  }
+  .dailyComboProgress {
+    display: flex;flex-direction: row;flex-wrap: nowrap;
+    background-color: var(--color-dimgreen);
+    padding: var(--padding-4xs);border-radius: var(--br-3xs);
+  }
+  .dailyComboProgressChild {
+    height: 20px;
+    width: 20px;
+    margin-top: -2px;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .div1 {
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 110%;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-white);
+    display: inline-block;
+    min-width: 64.3px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-10xs-2) 0 0;
+  }
+  .dailyComboProgressItem {
+    height: 16px;
+    width: 16px;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 5px;
+    margin-top: 2px;
+    /* min-height: 16px; */
+  }
+  
+  .frameItem,
+  .rectangleParent {
+    background-color: var(--color-darkslategray-100);
+    box-sizing: border-box;
+  }
+  .rectangleParent {
+    align-self: stretch;
+    border-radius: var(--br-3xs);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-9xs) var(--padding-11xs) var(--padding-9xs) var(--padding-11xs);
+    max-width: 100%;
+    background-color: var(--color-dark-bg);
+    gap: var(--gap-xl);
+    z-index: 3;
+  }
+  @media screen and (max-width: 281px) {
+    .rectangleParent {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 147px) {
+    .frameDiv,
+    .rectangleGroup {
+      flex: 1;
+    }
+  }
+  

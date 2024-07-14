@@ -1,0 +1,83 @@
+.tabmain {
+    width: 100%;
+}
+.tabmain_inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    border-radius: var(--br-xs);
+    background-color: var(--color-darkdimgray);;
+    padding: var(--padding-4xs) var(--padding-8xs);
+    box-sizing: border-box;
+}
+.tabmain_inner button {
+    background-color: var(--color-darkslategray-100);
+    border-radius: var(--br-8xs);
+    border: none;font-weight: 600;
+    font-size: var(--font-size-xs);
+    padding: var(--padding-9xs) var(--padding-8xs);
+    font-family: var(--font-roboto);
+    letter-spacing: 1px;
+    color: var(--color-white);
+}
+.active {
+    background-color: var(--color-dimgreen) !important;
+}
+.tabbtn {
+    background-color: var(--color-darkslategray-100) !important;
+}
+.day h3 {
+    font-size: var(--font-size-sm);color: var(--color-lightgray);
+}
+.day .daymain .daymainc {
+    width: 100%;
+}
+.day .daymain .daymainc .daycon {
+    background-color: var(--color-dimgray);border-radius: var(--br-3xs);
+    margin: 12px auto 12px auto;display: flex;align-items: center;justify-content: space-between;
+}
+.day .daymain .daymainc .daycon .daycona {
+    display: flex;flex-direction: row;align-items: flex-start;justify-content: flex-start;
+    margin: auto 0;text-align: left;
+}
+.day .daymain .daymainc .daycon .daydet {
+    font-size: var(--font-size-xs);justify-content: unset;display: block;flex-direction: unset;
+    text-align: left !important;width: 100%;align-items: center;
+    margin: auto 10px;
+
+}
+.day .daymain .daymainc .daycon .daydet .dayname {
+    text-align: left !important;margin-left: 0 !important;
+    width: 100%;padding-left: 0 !important;
+}
+.day .daymain .daymainc .daycon .daylvlname {
+    font-size: var(--font-size-xs);
+}
+.day .daymain .daymainc .daycon .daylvl {
+    color: var(--color-lightgray);font-size: var(--font-size-xs);display: flex;flex-direction: row;
+
+}
+.day .daymain .daymainc .daycon .daycona .daylvl {
+    margin-top: 6px;
+}
+.day .daymain .daymainc .daycon .dayconb {
+    display: flex;flex-direction: row;align-items: flex-start;justify-content: flex-start;
+}
+.day .daymain .daymainc .daycon .dayconb .daylvl {
+    margin-right: 12px;
+}
+.day .daymain .daymainc .daycon .dayconb .chevron {
+    color: var(--color-lightgray);margin-right: 5px;
+}
+.day .daymain .daymainc .daycon .dayimg {
+    width: 60px;height: 50px;margin: auto;text-align: center;align-items: center;
+    align-self: center;padding: 0;padding-bottom: 20px;padding: var(--padding-8xs);
+}
+.day .daymain .daymainc .daycon .img1 {
+    width: 20px;margin-top: -5px;
+}
+.fdate {
+    color: var(--color-dimgreen);
+}

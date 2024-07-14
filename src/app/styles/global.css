@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@font-face {
+  font-family: 'RussoOne Regular';
+  src: url('/fonts/RussoOne-Regular.ttf') format('truetype'),
+       url('/fonts/RussoOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  margin: 0 auto;
+  height: 100%;
+  line-height: normal;
+  overflow-x: hidden;
+  font-size: 14px;
+  background-color: #1e0e2d;
+  font-family: 'RussoOne Regular';
+}
+:root {
+  /* fonts */
+  --font-roboto: "RussoOne Regular";
+  --font-rubik: Rubik;
+
+  /* font sizes */
+  --font-size-4xs: 9px;
+  --font-size-sm: 14px;
+  --font-size-6xs: 7px;
+  --font-size-21xl: 40px;
+  --font-size-2xs: 11px;
+  --font-size-5xl: 24px;
+  --font-size-2xs: 11px;
+  --font-size-lg: 18px;
+  --font-size-16: 16px;
+  --font-size-4xs-2: 8.2px;
+  --font-size-xs: 12px;
+  --font-size-smi: 13px;
+
+
+  /* Colors */
+  --color-gray-100: #fffefd;
+  --color-gray-200: rgba(0, 0, 0, 0.5);
+  --color-gray-500: rgba(0, 0, 0, 0.259);
+  --color-gray-300: rgba(255, 255, 255, 0.5);
+  --color-gray-400: rgba(33, 36, 41, 0.5);
+  --color-dark-bg: #1c1f24;
+  --color-blackopaque: rgba(0, 0, 0, 0.087);
+  --color-darkslategray-100: #32363c;
+  --color-darkslategray-200: #32363b;
+  --color-darkslategray-300: #2c2f35;
+  --color-darkslategray-400: rgba(50, 54, 59, 0.7);
+  --color-white: #ffffff;
+  --color-lightgray: #cec9c9;
+  --color-lightgraylight: #efeded;
+  --color-dimgray: rgba(85, 85, 85, 0.75);
+  --color-darkdimgray: rgba(7, 5, 5, 0.516);
+  --color-dimgraymirror: rgba(12, 11, 11, 0.294);
+  --color-lightgreen: #84cb69;
+  --color-dimgreenlight: #73c951d5;
+  --color-dimgreen: #33ad03;
+  --color-royalblue: #6f72e2;
+  --color-black: #000000;
+  --color-sandybrown: #f79841;
+  --color-darksandybrown: rgb(235, 178, 33);
+  --color-sandybrownlight: #f799414e;
+  --color-darkorange: #fe881c;
+  --color-palegreen: #bfff97;
+  --color-gold: #f9d838;
+
+  /* Gaps */
+  --gap-3xl-4: 22.4px;
+  --gap-13xl: 32px;
+  --gap-base: 16px;
+  --gap-27xl-8: 46.8px;
+  --gap-xl: 20px;
+  --gap-6xs: 7px;
+  --gap-5xs-1: 7.1px;
+  --gap-8xs: 5px;
+  --gap-11xs: 2px;
+  --gap-xs: 12px;
+  --gap-10xs: 3px;
+  --gap-5xs: 8px;
+  --gap-4xs: 9px;
+  --gap-4xs-6: 8.6px;
+  --gap-9xs: 4px;
+  --gap-4xs-4: 8.4px;
+  --gap-mini-7: 14.7px;
+  --gap-3xs: 10px;
+  --gap-10xs-2: 2.2px;
+  --gap-5xs-9: 7.9px;
+  --gap-mid-7: 17.7px;
+  --gap-mid-1: 17.1px;
+  --gap-mini-3: 14.3px;
+  --gap-mini: 15px;
+  --gap-base: 16px;
+  --gap-smi: 13px;
+  --gap-xs-5: 11.5px;
+  --gap-7xs: 6px;
+
+   /* Paddings */
+   --padding-11xl: 30px;
+   --padding-xl: 20px;
+   --padding-9xl: 28px;
+   --padding-8xs: 5px;
+   --padding-3xs: 10px;
+   --padding-12xs: 1px;
+   --padding-lg: 18px;
+   --padding-7xs: 6px;
+   --padding-2xs: 11px;
+   --padding-5xs: 8px;
+   --padding-13xl: 32px;
+   --padding-6xl: 25px;
+   --padding-11xs: 2px;
+   --padding-lgi: 19px;
+   --padding-xs: 12px;
+   --padding-4xs: 9px;
+   --padding-3xs-8: 9.8px;
+   --padding-mid: 17px;
+  --padding-3xl: 22px;
+  --padding-8xs: 5px;
+  --padding-base: 16px;
+  --padding-6xl: 25px;
+  --padding-mini-8: 14.8px;
+  --padding-3xs-1: 9.1px;
+  --padding-8xs-7: 4.7px;
+  --padding-11xs-5: 1.5px;
+  --padding-5xs-2: 7.2px;
+  --padding-smi: 13px;
+  --padding-mini-7: 14.7px;
+  --padding-3xs-2: 9.2px;
+  --padding-mini-1: 14.1px;
+  --padding-6xs-2: 6.2px;
+  --padding-10xs: 3px;
+  --padding-9xs: 4px;
+  --padding-3xs: 10px;
+  --padding-12xl: 31px;
+  --padding-18xl: 37px;
+  --padding-10xl: 29px;
+  --padding-15xl: 34px;
+  --padding-sm: 14px;
+  --padding-4xs-5: 8.5px;
+  --padding-10xs-2: 2.2px;
+
+  /* Border radiuses */
+  --br-60: 60px;
+  --br-31xl: 50px;
+  --br-5xs: 8px;
+  --br-xs: 12px;
+  --br-11xl: 30px;
+  --br-3xs: 10px;
+  --br-mini: 15px;
+  --br-8xs: 5px; 
+}
+
+/* .root {
+  width: 100%;
+  position: relative;
+  background-color: #1c1f24;
+  overflow: hidden;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 10px 0 0 0;
+  line-height: normal;
+  letter-spacing: normal;
+} */

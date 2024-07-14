@@ -1,0 +1,363 @@
+.top {
+    display: flex;flex-direction: row;align-items: center;width: 100%;margin: auto;text-align: center;
+    flex-wrap: nowrap;color: var(--color-white);
+}
+.top > div {
+    margin: auto;text-align: center;
+}
+.top > div button {
+    background: none;border: none;background-color: none;color: var(--color-white);
+}
+.profile {
+  padding: var(--padding-8xs) var(--padding-8xs)  0 var(--padding-8xs);
+  width: 96%;display: flex;flex-direction: row;justify-content: flex-start;
+  align-items: center;margin: auto;
+}
+.profile .badge {
+  padding-left: var(--padding-8xs);color: var(--color-white);font-size: var(--font-size-xs);
+  font-family: var(--font-roboto);font-weight: 600;
+}
+.userinfo {
+    margin: 0 auto 20px auto;
+    margin-bottom: 20px;
+    align-self: stretch;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--gap-4xs);
+    white-space: nowrap;
+    z-index: 3;
+    width: auto;
+    text-align: left;
+    padding: var(--padding-2xs) var(--padding-12xs) !important;
+    font-size: var(--font-size-2xs);
+    color: var(--color-sandybrown);
+    font-family: var(--font-roboto);
+    padding-bottom: 20px;
+}
+.userinfo > div {
+    margin: auto;padding: var(--padding-8xs);text-align: center;
+}
+.wrapperGroup9Child {
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  object-fit: contain;
+  position: absolute;
+  left: 0;
+  top: -6px;
+  transform: scale(1.355);
+}
+.wrapperGroup9 {
+  height: 42px;
+  width: 42px;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.levelValue {
+  flex: 1;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 46px;
+  z-index: 3;
+}
+.levelProgress,
+.wrapperGroup9Parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.wrapperGroup9Parent {
+  width: 206px;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.levelProgress {
+  flex: 1;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.epic,
+.levelImageIcon {
+  position: relative;
+  flex-shrink: 0;
+  z-index: 3;
+}
+.epic {
+  letter-spacing: -0.02em;
+  line-height: 8px;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 13px;
+}
+.levelImageIcon {
+  width: 2px;
+  height: 4px;
+  object-fit: contain;
+}
+.currentLevel,
+.levelIcon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.levelIcon {
+  flex-direction: column;
+  padding: var(--padding-11xs) 0 0;
+}
+.currentLevel {
+  flex-direction: row;
+  padding: 0;
+  gap: var(--gap-10xs);
+}
+.span {
+  color: var(--color-white);
+}
+.level610 {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 8px;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 32px;
+  z-index: 3;
+  color: var(--color-gray-300);
+}
+.levelTitle {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.frameChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-darkslategray-100);
+  border: 0.5px solid var(--color-dimgray);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 3;
+}
+.levelBackground,
+.rectangleParent {
+  height: 9px;
+  border-radius: var(--br-11xl);
+}
+.levelBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #adfaa1, #c597cc 45%, #2f39a3);
+  width: 23px;
+  z-index: 4;
+}
+.rectangleParent {
+  align-self: stretch;
+  position: relative;
+  background-color: var(--color-darkslategray-100);
+  border: 0.5px solid var(--color-dimgray);
+  box-sizing: border-box;
+  z-index: 3;
+}
+.level {
+  width: 35%;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-6xs);
+  font-size: var(--font-size-2xs);
+  color: var(--color-white);
+}
+.levelInfo {
+  height: 102px;
+  align-items: flex-start;
+  padding: 0 0 var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-xs);
+  text-align: left;
+  font-size: var(--font-size-21xl);
+  color: var(--color-gray-100);
+  font-family: var(--font-roboto);
+}
+
+.earnPerTap {
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 110%;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 57px;
+  }
+  .profitAmountChild {
+    height: 15px;
+    width: 15px;
+    position: relative;
+    min-height: 15px;
+  }
+  .profitSymbol {
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 110%;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 19px;
+    white-space: nowrap;
+  }
+  .profitAmount,
+  .profitTitle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .profitAmount {
+    flex-direction: row;
+    padding: 0 var(--padding-3xs);
+    gap: var(--gap-10xs);
+    color: var(--color-white);
+  }
+  .profitTitle {
+    flex: 0.6867;
+    border-radius: var(--br-3xs);
+    background-color: var(--color-darkslategray-200);
+    overflow: hidden;
+    flex-direction: column;
+    padding: var(--padding-5xs) var(--padding-11xl);
+    box-sizing: border-box;
+    gap: var(--gap-6xs);
+    min-width: 88px;
+  }
+  .coinsToLevel,
+  .m {
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 110%;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 78px;
+  }
+  .m {
+    font-weight: 600;
+    min-width: 25px;
+  }
+  .mWrapper,
+  .profitTitle1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 var(--padding-xl);
+    color: var(--color-white);
+  }
+  .profitTitle1 {
+    flex: 0.9518;
+    border-radius: var(--br-3xs);
+    background-color: var(--color-darkslategray-200);
+    overflow: hidden;
+    flex-direction: column;
+    padding: var(--padding-5xs) var(--padding-lgi) var(--padding-2xs);
+    box-sizing: border-box;
+    gap: var(--gap-6xs);
+    min-width: 88px;
+    color: var(--color-royalblue);
+  }
+  .profitPerHour {
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 110%;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 69px;
+  }
+  .frameChild {
+    height: 15px;
+    width: 15px;
+    min-height: 15px;
+  }
+  .frameChild,
+  .k,
+  .profitIcon {
+    position: relative;
+  }
+  .k {
+    letter-spacing: -0.02em;
+    line-height: 110%;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 47px;
+  }
+  .profitIcon {
+    height: 15px;
+    width: 15px;
+    min-height: 15px;
+  }
+  .frameParent {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gap-10xs);
+    color: var(--color-white);
+  }
+  .frameParent,
+  .details,
+  .userinfo {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .details {
+    display: flex;
+    border-radius: var(--br-60);
+    background-color: var(--color-darkslategray-200);
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    box-sizing: border-box;
+    margin: auto;
+    text-align: center;
+    margin-right: 8px !important;
+    color: var(--color-lightgreen);
+    width: 55%;
+    height: 40px;
+  }
+  .details button {
+    background-color: none;background-color: transparent;
+  }
+  .details .b_earn {
+    border-left: 1px solid var(--color-gray-300);border-right: 1px solid var(--color-gray-300);
+    width: 70%;color: var(--color-gray-300);
+  }
+  .details .bst_earn {
+    display: flex;flex-direction: row;justify-content: space-between;align-items: center;
+    width: fit-content;margin: auto;text-align: center;color: var(--color-gray-300);
+  }
+  .details .bst_earn .bimg {
+    width: 24px;height: 24px;
+  }
+  .details .settingsicon {
+    color: var(--color-gray-300);
+  }
+
+  @media screen and (max-width: 352px) {
+    .userinfo {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 145px) {
+    .profitTitle,
+    .profitTitle1 {
+      flex: 1;
+    }
+  }
+  

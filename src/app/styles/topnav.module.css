@@ -1,0 +1,161 @@
+.earnPerTap {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 110%;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 57px;
+}
+.profitAmountChild {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  min-height: 15px;
+}
+.profitSymbol {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 110%;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 19px;
+  white-space: nowrap;
+}
+.profitAmount,
+.profitTitle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.profitAmount {
+  flex-direction: row;
+  padding: 0 var(--padding-3xs);
+  gap: var(--gap-10xs);
+  color: var(--color-white);
+}
+.profitTitle {
+  margin-top: 10px;
+  flex: 0.6867;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-dark-bg);
+  overflow: hidden;
+  flex-direction: column;
+  border: 1px solid var(--color-sandybrown);
+  padding: var(--padding-5xs) var(--padding-11xl);
+  box-sizing: border-box;
+  gap: var(--gap-6xs);
+  min-width: 88px;
+}
+.coinsToLevel,
+.m {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 110%;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 78px;
+}
+.m {
+  font-weight: 600;
+  min-width: 25px;
+}
+.mWrapper,
+.profitTitle1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 var(--padding-xl);
+  color: var(--color-white);
+}
+.profitTitle1 {
+  flex: 0.9518;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-darkslategray-200);
+  overflow: hidden;
+  flex-direction: column;
+  padding: var(--padding-5xs) var(--padding-lgi) var(--padding-2xs);
+  box-sizing: border-box;
+  gap: var(--gap-6xs);
+  min-width: 88px;
+  color: var(--color-royalblue);
+}
+.profitPerHour {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 110%;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 69px;
+}
+.frameChild {
+  height: 15px;
+  width: 15px;
+  min-height: 15px;
+}
+.frameChild,
+.k,
+.profitIcon {
+  position: relative;
+}
+.k {
+  letter-spacing: -0.02em;
+  line-height: 110%;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 47px;
+}
+.profitIcon {
+  height: 15px;
+  width: 15px;
+  min-height: 15px;
+}
+.frameParent {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-10xs);
+  color: var(--color-white);
+}
+.frameParent,
+.profitTitle2,
+.profitTitleParent {
+  display: flex;
+  justify-content: flex-start;
+}
+.profitTitle2 {
+  flex: 1;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-darkslategray-200);
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-5xs) var(--padding-mid);
+  box-sizing: border-box;
+  gap: var(--gap-6xs);
+  min-width: 88px;
+  color: var(--color-lightgreen);
+}
+.profitTitleParent {
+  margin: 0;
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gap-4xs);
+  white-space: nowrap;
+  z-index: 3;
+  text-align: left;
+  font-size: var(--font-size-2xs);
+  color: var(--color-sandybrown);
+  font-family: var(--font-roboto);
+}
+@media screen and (max-width: 352px) {
+  .profitTitleParent {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 145px) {
+  .profitTitle,
+  .profitTitle1 {
+    flex: 1;
+  }
+}

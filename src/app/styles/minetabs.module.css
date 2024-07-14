@@ -1,0 +1,77 @@
+.tabmain {
+    width: 100%;
+}
+.tabmain_inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    border-radius: var(--br-xs);
+    background-color: var(--color-darkdimgray);;
+    padding: var(--padding-4xs) var(--padding-8xs);
+    box-sizing: border-box;
+}
+.tabmain_inner button {
+    background-color: var(--color-darkslategray-100);
+    border-radius: var(--br-8xs);
+    border: none;font-weight: 600;
+    font-size: var(--font-size-xs);
+    padding: var(--padding-9xs) var(--padding-8xs);
+    font-family: var(--font-roboto);
+    letter-spacing: 1px;
+    border: 1px solid var(--color-sandybrownlight);
+    color: var(--color-white);
+}
+.active {
+    background-color: var(--color-dimgreen) !important;
+}
+.tabbtn {
+    background-color: var(--color-darkslategray-100) !important;
+}
+.chain {
+    display: flex;flex-direction: row;flex-wrap: wrap;
+    align-items: center;justify-content: space-between;
+    width: 100%;margin: auto;
+    text-align: left;
+}
+.chain .chain_c {
+    background-color: var(--color-dimgraymirror);
+    width: 45%;margin-top: 16px;padding: var(--padding-8xs);color: var(--color-white);
+    border-radius: var(--br-mini);box-shadow: 0px 1px 1px 2px var(--color-darkdimgray);
+}
+.chain .chain_c .chain_d .pairLabelsContainer {
+    display: flex;flex-direction: row;flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+.chain .chain_c .chain_d .pairLabelsContainer .icon {
+    width: 55px;height: 55px;
+}
+.chain .chain_c .chain_d .pairLabelsContainer .blkchain {
+    align-items: center;margin: auto;text-align: center;
+}
+.chain .chain_c .chain_d .pairLabelsContainer .blkchain .profitPairValuesContainer {
+    margin: 10px auto 5px auto;text-align: center;padding: var(--padding-8xs) var(--padding-12xs);
+}
+.chain .chain_c .chain_d .pairLabelsContainer .blkchain .chainname {
+    font-size: var(--font-size-xs);color: var(--color-white);font-weight: 600;text-align: left;
+}
+.chain .chain_c .chain_d .pairLabelsContainer .blkchain .chain_e {
+    display: flex;flex-direction: row;margin-top: 4px;text-align: left;
+}
+.chain .chain_c .chain_d .pairLabelsContainer .blkchain .chain_e .cimg {
+    width: 20px;height: 20px;margin-top: -6px;
+}
+.coinlvl {
+    display: flex;flex-direction: row;flex-wrap: nowrap;
+    align-items: center;justify-content: flex-start;
+    border-top: 1px solid var(--color-dimgray);padding-top: var(--padding-9xs);
+}
+.coinlvl .ccoin {
+    display: flex;flex-direction: row;flex-wrap: nowrap;
+    align-items: center;justify-content: space-around;text-align: left;
+    border-left: 1px solid var(--color-dimgray);margin-left: 30%;padding-left: var(--padding-4xs);
+}
+.coinlvl .ccoin .cimg {
+    width: 20px;height: 20px;margin-top: -4px;
+}

@@ -1,0 +1,14 @@
+.teamContainerWrapper {
+  width: 100%;margin: 30px auto;
+}
+.teamContainerWrapper .teamContainer {
+  display: flex;flex-direction: row;align-items: center;justify-content: space-between;
+  margin: auto;flex-wrap: nowrap;
+}
+.teamContainerWrapper .teamContainer .rectangleGroup {
+  width: 30%;background-color: var(--color-dark-bg);height: 100%;border-radius: var(--br-xs);
+  margin: auto;text-align: center;
+}
+.teamContainerWrapper .teamContainer .rectangleGroup .rectinna .image6Icon {
+  width: 80%;height: 80%;margin: auto;text-align: center;padding: var(--padding-xs);
+}

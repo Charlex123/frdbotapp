@@ -1,0 +1,121 @@
+.testnet {
+    width: auto;color: var(--color-white);padding: var(--padding-xs) var(--padding-lg);font-family: var(--font-roboto);
+    padding-bottom: 80px;
+}
+.testnet .testnetc {
+    width: 100%;    
+}
+.testnet .header {
+    color: var(--color-white);margin: 15px auto;text-align: center;
+}
+.testnet .header .headerimg {
+    width: 60px;
+}
+.testnet .header h2 {
+    margin: 32px auto 20px auto;
+}
+.testnet .header h3 {
+    font-size: var(--font-size-sm);text-align: left;color: var(--color-lightgray);
+}
+.testnet blockquote {
+    font-family: var(--font-roboto);
+    font-size: 1em;
+    font-style: italic;
+    color: var(--color-white);
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "“" "”" "‘" "’";
+}
+.testnet blockquote .icon {
+    width: 20px;height: 20px;
+}
+.testnet blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 2em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+.testnet blockquote:after {
+    content: close-quote;
+    font-size: 2em;
+    color: var(--color-white);
+    line-height: 0.1em;
+    margin-left: 0.25em;
+    vertical-align: -0.4em;
+}
+
+.testnet blockquote p {
+    display: inline;
+}
+.testnet blockquote p span {
+    color: var(--color-sandybrown);
+}
+.testnet .about {
+    width: 100%;text-align: left;position: relative;
+}
+.testnet .papyrus {
+    width: 100%;height: 380px;
+    transform: skewX(10deg);
+}
+.testnet .about .abt {
+    position: absolute;top: 16%;color: var(--color-black);
+    left: 25%;z-index: 1;width: 50%;background-color: var(--color-blackopaque);
+    border-radius: var(--br-11xl);padding: var(--padding-11xs) var(--padding-4xs);
+    text-align: left;
+}
+.testnet .about .abt ul {
+    width: 100%;text-align: left !important;margin-left: 0 !important;
+}
+.testnet .about .abt ul li {
+    list-style: none;text-align: left;margin: 8px 0;
+}
+.testnet .about .abt ul li img {
+    width: 20px;margin: -5px 4px 0 auto;height: 20px;
+}
+.testnet .tnet {
+    margin: 40px 0;width: 100%;
+}
+.testnet .mbonuses .bonuseslist .blistcon {
+    width: 100%;
+}
+.testnet .tnet .tnetmainc {
+    width: 100%;
+}
+.testnet .tnet .tnetmainc .tnetcon {
+    background-color: var(--color-dimgray);border-radius: var(--br-3xs);
+    margin: 12px auto 12px auto;
+    display: flex;flex-direction: row;text-align: left;
+    align-items: center;justify-content: space-between;
+}
+.testnet .tnet .tnetmainc .tnetcon .tnetcona {
+    display: flex;flex-direction: row;align-items: center;justify-content: flex-start;
+}
+.testnet .tnet .tnetmainc .tnetcon .tnetcona .refdet {
+    font-size: var(--font-size-xs);
+    text-align: left !important;width: 100%;align-items: flex-start !important;
+}
+.testnet .tnet .tnetmainc .tnetcon .refdet .refname {
+    text-align: left !important;margin-left: 0 !important;
+    width: 100%;padding-left: 0 !important;
+}
+.testnet .tnet .tnetmainc .tnetcon .tnetcona .refdet .lvlname {
+    font-size: var(--font-size-xs);
+}
+.testnet .tnet .tnetmainc .tnetcon .tnetcona .refdet .reflvl {
+    color: var(--color-lightgreen);font-size: var(--font-size-xs);
+    justify-content: flex-start;display: flex;flex-direction: row;
+}
+.testnet .tnet .tnetmainc .tnetcon .refimg {
+    width: 60px;height: 60px;margin: auto;text-align: center;align-items: center;
+    align-self: center;padding: 0;padding-bottom: 10px;
+}
+.testnet .tnet .tnetmainc .tnetcon .img1 {
+    width: 20px;margin-top: -5px;
+}
+.testnet .tnet .tnetmainc .tnetcon .tnetconb {
+    display: flex;flex-direction: row;align-items: center;justify-content: flex-start;margin-right: 10px;
+}

@@ -1,0 +1,159 @@
+.wrapperGroup9Child {
+  height: 25px;
+  width: 25px;
+  z-index: 3;
+  object-fit: contain;
+  position: absolute;
+  left: 0;
+  right: -4px;
+  top: 4px;
+  transform: scale(1.355);
+}
+.wrapperGroup9 {
+  height: 42px;
+  width: 42px;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  margin-right: -10px;
+  align-items: center;
+  justify-content: center;
+}
+.levelValue {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 46px;
+  z-index: 3;
+}
+.levelProgress,
+.wrapperGroup9Parent {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapperGroup9Parent {
+  width: fit-content;
+  border: 1px solid var(--color-darkslategray-100);
+  /* background-color: var(--color-dark-bg); */
+  border-radius: var(--br-60) !important;
+  justify-content: space-around;
+  padding: 0 var(--padding-4xs) !important;
+  margin-top: 20px;
+}
+.levelProgress {
+  flex: 1;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.epic,
+.levelImageIcon {
+  position: relative;
+  flex-shrink: 0;
+  z-index: 3;
+}
+.epic {
+  letter-spacing: -0.02em;
+  line-height: 8px;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 13px;
+}
+.levelImageIcon {
+  width: 2px;
+  height: 4px;
+  object-fit: contain;
+}
+.currentLevel,
+.levelIcon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.levelIcon {
+  flex-direction: column;
+  padding: var(--padding-11xs) 0 0;
+}
+.currentLevel {
+  flex-direction: row;
+  padding: 0;
+  gap: var(--gap-10xs);
+}
+.span {
+  color: var(--color-white);
+}
+.level610 {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 8px;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 32px;
+  z-index: 3;
+  color: var(--color-gray-300);
+}
+.levelTitle {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.frameChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-darkslategray-100);
+  border: 0.5px solid var(--color-dimgray);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 3;
+}
+.levelBackground,
+.rectangleParent {
+  height: 9px;
+  border-radius: var(--br-11xl);
+}
+.levelBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #adfaa1, #c597cc 45%, #2f39a3);
+  width: 23px;
+  z-index: 4;
+}
+/* .rectangleParent {
+  align-self: stretch;
+  position: relative;
+  background-color: var(--color-darkslategray-100);
+  border: 0.5px solid var(--color-dimgray);
+  box-sizing: border-box;
+  z-index: 3;
+} */
+.levelInfo,
+.levelName {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  /* gap: var(--gap-6xs); */
+  font-size: var(--font-size-6xs);
+  color: var(--color-white);
+}
+.levelInfo {
+  height: fit-content;
+  align-items: flex-start;
+  padding: 0 0 0 0;
+  box-sizing: border-box;
+  /* gap: var(--gap-xs); */
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-100);
+  font-family: var(--font-roboto);
+}

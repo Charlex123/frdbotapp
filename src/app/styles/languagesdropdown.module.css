@@ -1,0 +1,56 @@
+.language {
+    width: auto;color: var(--color-white);padding: var(--padding-xs) var(--padding-lg);font-family: var(--font-roboto);
+    top: 0;bottom: 0;left: 0;right: 0;height: 100vh;width: auto;
+    position: fixed;background-color: var(--color-dark-bg);z-index: 99999;
+}
+.language select {
+    width: 100%;
+    background-color: var(--color-darkdimgray);border-radius: var(--br-lg);
+    
+}
+.language select option {
+    width: 100%;
+}
+.language .languagelist {
+    margin: 40px 0;width: 100%;
+}
+.language .mbonuses .bonuseslist .blistcon {
+    width: 100%;
+}
+.language .languagelist .languagelistmainc {
+    width: 100%;
+}
+.language .languagelist .languagelistmainc .languagecon {
+    background-color: var(--color-dimgray);border-radius: var(--br-11xl);
+    margin: 12px auto 12px auto;padding: var(--padding-sm) var(--padding-xs);
+    display: flex;flex-direction: row;text-align: left;
+    align-items: center;justify-content: space-between;
+}
+.language .languagelist .languagelistmainc .languagecon .languagecona {
+    display: flex;flex-direction: row;align-items: center;justify-content: flex-start;
+}
+.language .languagelist .languagelistmainc .languagecon .languagecona .languagedet {
+    font-size: var(--font-size-xs);
+    text-align: left !important;width: 100%;align-items: flex-start !important;
+}
+.language .languagelist .languagelistmainc .languagecon .languagedet .languagename {
+    text-align: left !important;margin-left: 0 !important;
+    width: 100%;padding-left: 0 !important;
+}
+.language .languagelist .languagelistmainc .languagecon .languagecona .languagedet .lvlname {
+    font-size: var(--font-size-xs);
+}
+.language .languagelist .languagelistmainc .languagecon .languagecona .languagedet .languagelvl {
+    color: var(--color-lightgreen);font-size: var(--font-size-xs);
+    justify-content: flex-start;display: flex;flex-direction: row;
+}
+.language .languagelist .languagelistmainc .languagecon .languageimg {
+    width: 40px;height: 40px;margin: auto;text-align: center;align-items: center;
+    align-self: center;padding: 0;padding-bottom: 5px;
+}
+.language .languagelist .languagelistmainc .languagecon .img1 {
+    width: 20px;margin-top: -5px;
+}
+.language .languagelist .languagelistmainc .languagecon .languageconb {
+    display: flex;flex-direction: row;align-items: center;justify-content: flex-start;margin-right: 10px;
+}
