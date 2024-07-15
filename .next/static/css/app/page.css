@@ -1024,29 +1024,33 @@
     right: 0;
     left: 0;
   }
-  .tabcomponent_gameInfoChild__2yysC,
-  .tabcomponent_levelUpChild__OYmSK {
+  .tabcomponent_tapChild__b1imD,
+  .tabcomponent_tapimage__fA8__ {
     position: relative;
     max-width: 100%;
+    outline: none !important;
   }
-  .tabcomponent_levelUp__pAB48 {
+  .tabcomponent_tapc__0ivDo {
     align-items: center;
     padding: 0 23px;
+    position: relative;
     margin: 20px !important;
     text-align: center;
     box-sizing: border-box;
     max-width: 100%;
+    background-color: none;
   }
-  .tabcomponent_levelUpChild__OYmSK {
+  .tabcomponent_tapimage__fA8__ {
     width: 100%;
     height: 100%;
     margin: auto;
     text-align: center;
     overflow: hidden;
     z-index: 3;
+    outline: none !important;
   }
   .tabcomponent_componentParent__BQaKd,
-  .tabcomponent_gameInfo__J_yRk,
+  .tabcomponent_tap__9mLvi,
   .tabcomponent_root__Qwr1Z {
     display: flex;
     flex-direction: column;
@@ -1057,13 +1061,12 @@
     padding: 0;
     max-width: 100%;
   }
-  .tabcomponent_gameInfo__J_yRk,
+  .tabcomponent_tap__9mLvi,
   .tabcomponent_root__Qwr1Z {
     box-sizing: border-box;
   }
-  .tabcomponent_gameInfo__J_yRk {
-    position: absolute;
-    top: 180px;
+  .tabcomponent_tap__9mLvi {
+    position: relative;
     bottom: 0;
     overflow: hidden;
     background-color: var(--color-darkslategray-300);
@@ -1074,12 +1077,11 @@
     box-sizing: border-box;
     max-width: 100%;
     height: auto !important;
-    margin-bottom: 0 !important;
+    margin-bottom: 190px !important;
     z-index: 2;
-  }
-  
+  }  
   @media screen and (max-width: 381px) {
-    .tabcomponent_gameInfo__J_yRk {
+    .tabcomponent_tap__9mLvi {
       box-sizing: border-box;
     }
   }
@@ -1088,13 +1090,12 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/boost.module.css ***!
   \***************************************************************************************************************************************************************************************************************************************************************************/
 .boost_actions__S0jpG {
-    position: relative;bottom: 90px;
+    position: relative;
     font-size: var(--font-size-xs);
     color: var(--color-white);
     font-family: var(--font-roboto);
-    width: auto;
-    left: 0;right: 0;
     overflow: hidden;
+    width: 100%;
     padding: var(--padding-12xs) var(--padding-8xs);
   }
   .boost_boostIcon__kThLd {
@@ -1108,14 +1109,6 @@
     max-height: 100%;
     object-fit: contain;
   }
-  .boost_boost__dC3S0,
-  .boost_div__VDCpF {
-    position: relative;
-    letter-spacing: -0.02em;
-    line-height: 110%;
-    font-weight: 600;
-    display: inline-block;
-  }
   .boost_boost__dC3S0 {
     min-width: 36px;
   }
@@ -1127,18 +1120,51 @@
   .boost_boostAction__ry4vp {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    padding: var(--padding-3xs-8) 0 var(--padding-3xs-8) var(--padding-13xl);
-    position: relative;
-    gap: var(--gap-xl);
-    z-index: 3;
-    width: 90%;
+    padding: var(--padding-3xs-8) 0 var(--padding-3xs-8) 0;
+    position: relative;font-size: var(--font-size-lg);
+    width: 100%;
   }
-  
+  .boost_boostAction__ry4vp .boost_boost_a__8uztV {
+    display: flex;flex-direction: row;align-items: center;justify-content: flex-start;
+  }
+  .boost_boostAction__ry4vp .boost_boost_a__8uztV .boost_boosterinna__JWN61 {
+    padding-left: var(--padding-8xs);
+  }
+  .boost_boostAction__ry4vp .boost_boost_b__ABnPu .boost_linka__vt4jX {
+    background-color: var(--color-dimgreen);border-radius: var(--br-xs);color: var(--color-white);
+    padding: var(--padding-8xs) var(--padding-3xs-8);text-decoration: none !important;
+  }
   @media screen and (max-width: 219px) {
     .boost_boostAction__ry4vp {
       flex-wrap: nowrap;
+    }
+  }
+  
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/animatedtext.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+/* components/AnimatedText.module.css */
+.animatedtext_animatedText__WizFu {
+    position: absolute;
+    z-index: 99999;
+    animation: animatedtext_fadeOut__kb2Pe 3s ease-out forwards;
+    color: var(--color-white);
+    font-size: 36px;
+    bottom: 0;
+    font-weight: 900;
+    pointer-events: none;
+  }
+  
+  @keyframes animatedtext_fadeOut__kb2Pe {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-50px);
     }
   }
   
@@ -1335,6 +1361,7 @@
   position: relative;
   letter-spacing: -0.02em;
   line-height: 46px;
+  font-size: var(--font-size-30);
   z-index: 3;
 }
 .levelinfo_levelProgress__nYIha,
@@ -1463,7 +1490,8 @@
   align-items: flex-start;
   padding: 0 0 0 0;
   box-sizing: border-box;
-  /* gap: var(--gap-xs); */
+  gap: var(--gap-xs);
+  margin: 20px auto;
   text-align: left;
   font-size: var(--font-size-xs);
   color: var(--color-gray-100);

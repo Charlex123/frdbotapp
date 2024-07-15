@@ -7,7 +7,7 @@ import MineTabs from "./components/MineTabs";
 import Header from "../components/Header";
 import BottomNav from "../components/BottomNav";
 import DailyCombo from "./components/DailyCombo";
-import TapComponent from "./components/TapComponent";
+import TapComponent from "../components/TapComponent";
 import LevelInfo from "../components/LevelInfo";
 
 const Mine: NextPage = () => {

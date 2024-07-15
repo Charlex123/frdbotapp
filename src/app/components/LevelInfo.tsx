@@ -3,9 +3,10 @@ import styles from "../styles/levelinfo.module.css";
 
 export type LevelInfoType = {
   className?: string;
+  points: number;
 };
 
-const LevelInfo: NextPage<LevelInfoType> = ({ className = "" }) => {
+const LevelInfo: NextPage<LevelInfoType> = ({ className = "", points }) => {
   return (
     <>
       <div className={[styles.levelInfo, className].join(" ")}>
@@ -19,7 +20,8 @@ const LevelInfo: NextPage<LevelInfoType> = ({ className = "" }) => {
                 src="/group-9-2.svg"
               />
             </div>
-            <b className={styles.levelValue}>507, 981</b>
+            <b className={styles.levelValue}>576,909</b>
+            {/* <b className={styles.levelValue}>{points?.toLocaleString()}</b> */}
           </div>
         </div>
       </div>

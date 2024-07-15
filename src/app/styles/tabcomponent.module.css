@@ -23,29 +23,33 @@
     right: 0;
     left: 0;
   }
-  .gameInfoChild,
-  .levelUpChild {
+  .tapChild,
+  .tapimage {
     position: relative;
     max-width: 100%;
+    outline: none !important;
   }
-  .levelUp {
+  .tapc {
     align-items: center;
     padding: 0 23px;
+    position: relative;
     margin: 20px !important;
     text-align: center;
     box-sizing: border-box;
     max-width: 100%;
+    background-color: none;
   }
-  .levelUpChild {
+  .tapimage {
     width: 100%;
     height: 100%;
     margin: auto;
     text-align: center;
     overflow: hidden;
     z-index: 3;
+    outline: none !important;
   }
   .componentParent,
-  .gameInfo,
+  .tap,
   .root {
     display: flex;
     flex-direction: column;
@@ -56,13 +60,12 @@
     padding: 0;
     max-width: 100%;
   }
-  .gameInfo,
+  .tap,
   .root {
     box-sizing: border-box;
   }
-  .gameInfo {
-    position: absolute;
-    top: 180px;
+  .tap {
+    position: relative;
     bottom: 0;
     overflow: hidden;
     background-color: var(--color-darkslategray-300);
@@ -73,12 +76,11 @@
     box-sizing: border-box;
     max-width: 100%;
     height: auto !important;
-    margin-bottom: 0 !important;
+    margin-bottom: 190px !important;
     z-index: 2;
-  }
-  
+  }  
   @media screen and (max-width: 381px) {
-    .gameInfo {
+    .tap {
       box-sizing: border-box;
     }
   }

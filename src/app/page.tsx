@@ -5,7 +5,7 @@ import LevelInfo from "./components/LevelInfo";
 import Footer from "./components/Footer";
 import styles from "./styles/index.module.css";
 import "./styles/global.css";
-import TapComponent from "./mine/components/TapComponent";
+import TapComponent from "./components/TapComponent";
 
 const Home: NextPage = () => {
   return (

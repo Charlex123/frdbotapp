@@ -23,6 +23,7 @@
   position: relative;
   letter-spacing: -0.02em;
   line-height: 46px;
+  font-size: var(--font-size-30);
   z-index: 3;
 }
 .levelProgress,
@@ -151,7 +152,8 @@
   align-items: flex-start;
   padding: 0 0 0 0;
   box-sizing: border-box;
-  /* gap: var(--gap-xs); */
+  gap: var(--gap-xs);
+  margin: 20px auto;
   text-align: left;
   font-size: var(--font-size-xs);
   color: var(--color-gray-100);

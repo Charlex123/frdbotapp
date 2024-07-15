@@ -1,7 +1,3 @@
 {
-  "/page": "app/page.js",
-  "/airdrop/page": "app/airdrop/page.js",
-  "/mine/page": "app/mine/page.js",
-  "/tasks/page": "app/tasks/page.js",
-  "/testnet/page": "app/testnet/page.js"
+  "/page": "app/page.js"
 }

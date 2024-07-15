@@ -1,0 +1,23 @@
+/* components/AnimatedText.module.css */
+.animatedText {
+    position: absolute;
+    z-index: 99999;
+    animation: fadeOut 3s ease-out forwards;
+    color: var(--color-white);
+    font-size: 36px;
+    bottom: 0;
+    font-weight: 900;
+    pointer-events: none;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  }
+  

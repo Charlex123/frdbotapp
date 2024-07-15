@@ -1,11 +1,10 @@
 .actions {
-    position: relative;bottom: 90px;
+    position: relative;
     font-size: var(--font-size-xs);
     color: var(--color-white);
     font-family: var(--font-roboto);
-    width: auto;
-    left: 0;right: 0;
     overflow: hidden;
+    width: 100%;
     padding: var(--padding-12xs) var(--padding-8xs);
   }
   .boostIcon {
@@ -19,14 +18,6 @@
     max-height: 100%;
     object-fit: contain;
   }
-  .boost,
-  .div {
-    position: relative;
-    letter-spacing: -0.02em;
-    line-height: 110%;
-    font-weight: 600;
-    display: inline-block;
-  }
   .boost {
     min-width: 36px;
   }
@@ -38,15 +29,22 @@
   .boostAction {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    padding: var(--padding-3xs-8) 0 var(--padding-3xs-8) var(--padding-13xl);
-    position: relative;
-    gap: var(--gap-xl);
-    z-index: 3;
-    width: 90%;
+    padding: var(--padding-3xs-8) 0 var(--padding-3xs-8) 0;
+    position: relative;font-size: var(--font-size-lg);
+    width: 100%;
   }
-  
+  .boostAction .boost_a {
+    display: flex;flex-direction: row;align-items: center;justify-content: flex-start;
+  }
+  .boostAction .boost_a .boosterinna {
+    padding-left: var(--padding-8xs);
+  }
+  .boostAction .boost_b .linka {
+    background-color: var(--color-dimgreen);border-radius: var(--br-xs);color: var(--color-white);
+    padding: var(--padding-8xs) var(--padding-3xs-8);text-decoration: none !important;
+  }
   @media screen and (max-width: 219px) {
     .boostAction {
       flex-wrap: nowrap;
