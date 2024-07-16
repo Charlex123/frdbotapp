@@ -9,6 +9,11 @@
   color: var(--color-gray-300);
   font-family: var(--font-roboto);
 }
+.minec,
+.minemain {
+  width: 100%;
+  border-top-left-radius: var(--br-31xl);border-top-right-radius: var(--br-31xl);
+}
 .mined {
   display: flex;
   align-items: flex-start;
@@ -17,11 +22,6 @@
   flex-direction: column;
   gap: 23px;
   max-width: 100%;
-}
-.minec,
-.minemain {
-  width: 100%;
-  border-top-left-radius: var(--br-31xl);border-top-right-radius: var(--br-31xl);
 }
 .minec {
   position: absolute;

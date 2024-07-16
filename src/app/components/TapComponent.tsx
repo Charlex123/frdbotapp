@@ -57,7 +57,7 @@ const TapComponent: NextPage = () => {
       {/* <img className={styles.unionIcon} alt="" src="/union.svg" /> */}
         <div className={styles.tapc}>
             <img className={styles.tapimage} alt="" src="/soccer.png"  onClick={handleImageClick}
-        style={{ cursor: 'pointer' }}/>
+        style={{ cursor: 'pointer', outline: 'none' }}/>
         {animations.map(({ id, x, y, number }) => (
           <AnimatedText
             key={id}

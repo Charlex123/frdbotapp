@@ -1,3 +1,23 @@
+.tap,
+  .root {
+    box-sizing: border-box;
+  }
+  .tap {
+    position: relative;
+    bottom: 0;
+    overflow: hidden;
+    background-color: var(--color-darkslategray-300);
+    border-top-left-radius: var(--br-31xl);
+    border-top-right-radius: var(--br-31xl);
+    padding: 0 29px 0 var(--padding-9xl);
+    gap: 62.1px;
+    box-sizing: border-box;
+    max-width: 100%;
+    outline: none !important;
+    height: auto !important;
+    margin-bottom: 190px !important;
+    z-index: 2;
+  } 
 .image1Icon {
     position: absolute;
     bottom: 210px;
@@ -6,6 +26,7 @@
     height: 273px;
     object-fit: cover;
     z-index: 4;
+    outline: none !important;
   }
   .unionIcon {
     width: 0;
@@ -38,6 +59,7 @@
     box-sizing: border-box;
     max-width: 100%;
     background-color: none;
+    outline: none !important;
   }
   .tapimage {
     width: 100%;
@@ -60,25 +82,7 @@
     padding: 0;
     max-width: 100%;
   }
-  .tap,
-  .root {
-    box-sizing: border-box;
-  }
-  .tap {
-    position: relative;
-    bottom: 0;
-    overflow: hidden;
-    background-color: var(--color-darkslategray-300);
-    border-top-left-radius: var(--br-31xl);
-    border-top-right-radius: var(--br-31xl);
-    padding: 0 29px 0 var(--padding-9xl);
-    gap: 62.1px;
-    box-sizing: border-box;
-    max-width: 100%;
-    height: auto !important;
-    margin-bottom: 190px !important;
-    z-index: 2;
-  }  
+   
   @media screen and (max-width: 381px) {
     .tap {
       box-sizing: border-box;

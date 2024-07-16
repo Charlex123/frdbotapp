@@ -29,6 +29,11 @@
   color: var(--color-gray-300);
   font-family: var(--font-roboto);
 }
+.mine_minec__EtN90,
+.mine_minemain__3DGOs {
+  width: 100%;
+  border-top-left-radius: var(--br-31xl);border-top-right-radius: var(--br-31xl);
+}
 .mine_mined__dQ0Cb {
   display: flex;
   align-items: flex-start;
@@ -37,11 +42,6 @@
   flex-direction: column;
   gap: 23px;
   max-width: 100%;
-}
-.mine_minec__EtN90,
-.mine_minemain__3DGOs {
-  width: 100%;
-  border-top-left-radius: var(--br-31xl);border-top-right-radius: var(--br-31xl);
 }
 .mine_minec__EtN90 {
   position: absolute;
@@ -1257,6 +1257,26 @@
 /*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/tabcomponent.module.css ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************/
+.tabcomponent_tap__9mLvi,
+  .tabcomponent_root__Qwr1Z {
+    box-sizing: border-box;
+  }
+  .tabcomponent_tap__9mLvi {
+    position: relative;
+    bottom: 0;
+    overflow: hidden;
+    background-color: var(--color-darkslategray-300);
+    border-top-left-radius: var(--br-31xl);
+    border-top-right-radius: var(--br-31xl);
+    padding: 0 29px 0 var(--padding-9xl);
+    gap: 62.1px;
+    box-sizing: border-box;
+    max-width: 100%;
+    outline: none !important;
+    height: auto !important;
+    margin-bottom: 190px !important;
+    z-index: 2;
+  } 
 .tabcomponent_image1Icon__8LOcm {
     position: absolute;
     bottom: 210px;
@@ -1265,6 +1285,7 @@
     height: 273px;
     object-fit: cover;
     z-index: 4;
+    outline: none !important;
   }
   .tabcomponent_unionIcon__QDnQM {
     width: 0;
@@ -1297,6 +1318,7 @@
     box-sizing: border-box;
     max-width: 100%;
     background-color: none;
+    outline: none !important;
   }
   .tabcomponent_tapimage__fA8__ {
     width: 100%;
@@ -1319,25 +1341,7 @@
     padding: 0;
     max-width: 100%;
   }
-  .tabcomponent_tap__9mLvi,
-  .tabcomponent_root__Qwr1Z {
-    box-sizing: border-box;
-  }
-  .tabcomponent_tap__9mLvi {
-    position: relative;
-    bottom: 0;
-    overflow: hidden;
-    background-color: var(--color-darkslategray-300);
-    border-top-left-radius: var(--br-31xl);
-    border-top-right-radius: var(--br-31xl);
-    padding: 0 29px 0 var(--padding-9xl);
-    gap: 62.1px;
-    box-sizing: border-box;
-    max-width: 100%;
-    height: auto !important;
-    margin-bottom: 190px !important;
-    z-index: 2;
-  }  
+   
   @media screen and (max-width: 381px) {
     .tabcomponent_tap__9mLvi {
       box-sizing: border-box;
