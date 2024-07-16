@@ -1,35 +1,9 @@
-.exchangeBackground {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  margin: 0 !important;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: var(--br-xs);
-  background-color: var(--color-darkslategray-400);
-}
-.unionIcon {
+.icon {
   height: 24px;
   width: 24px;
   position: relative;
 }
-.unionWrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-4xs) 0 var(--padding-5xs);
-}
-.exchange {
-  position: relative;
-  line-height: 10px;
-  font-weight: 500;
-  display: inline-block;
-  min-width: 40px;
-}
-.frameParent {
+.bottomnavmaincinna {
   border-radius: var(--br-31xl);
   background-color: var(--color-gray-500);
   display: flex;
@@ -44,187 +18,34 @@
   margin: auto;
   color: var(--color-white) !important;
 }
-.frameParent .link {
+.bottomnavmaincinna .link {
   width: 15%;margin: 1% auto;
   text-align: center;align-items: center;
 }
-.frameParent .link img {
+.bottomnavmaincinna .link img {
   margin: auto;text-align: center;
 }
-.frameParent .txt {
+.bottomnavmaincinna .txt {
   color: var(--color-gray-300) !important;text-align: center;margin: auto;
   padding: var(--padding-11xs) 0 var(--padding-11xs) 0;
 }
-.frameParent .link:focus, .frameParent .link:active {
+.bottomnavmaincinna .link:focus, .bottomnavmaincinna .link:active {
   background-color: var(--color-gray-500);border-radius: var(--br-xs);padding: var(--padding-8xs);
 }
-.groupIcon,
-.mine {
-  position: relative;
-  z-index: 1;
-}
-.groupIcon {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-}
-.mine {
-  letter-spacing: -0.02em;
-  line-height: 10px;
-  font-weight: 500;
-  display: inline-block;
-  min-width: 20px;
-}
-.groupParent,
-.mineButton {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.groupParent {
-  gap: var(--gap-8xs);
-}
-.mineButton {
-  padding: var(--padding-7xs) var(--padding-lgi) 0 0;
-}
-.friends,
-.groupIcon1 {
-  position: relative;
-  flex-shrink: 0;
-  z-index: 1;
-}
-.groupIcon1 {
-  width: 30.6px;
-  height: 15.9px;
-}
-.friends {
-  letter-spacing: -0.02em;
-  line-height: 10px;
-  font-weight: 500;
-  display: inline-block;
-  min-width: 29px;
-}
-.friendsWrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 0 0 var(--padding-11xs);
-}
-.frameWrapper,
-.groupGroup {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.groupGroup {
-  justify-content: flex-start;
-  gap: var(--gap-5xs-1);
-}
-.frameWrapper {
-  justify-content: flex-end;
-  padding: 0 0 var(--padding-12xs);
-}
-.earn,
-.earnButtonChild {
-  position: relative;
-  z-index: 1;
-}
-.earnButtonChild {
-  width: 25.2px;
-  height: 19px;
-  object-fit: cover;
-}
-.earn {
-  letter-spacing: -0.02em;
-  line-height: 10px;
-  font-weight: 500;
-  display: inline-block;
-  min-width: 18px;
-}
-.earnButton,
-.earnWrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.earnWrapper {
-  flex-direction: row;
-  padding: 0 var(--padding-12xs) 0 var(--padding-7xs);
-}
-.earnButton {
-  flex-direction: column;
-  gap: var(--gap-6xs);
-}
-.frameContainer {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: var(--gap-xl);
-}
-.airdrop {
-  position: relative;
-  letter-spacing: -0.02em;
-  line-height: 10px;
-  font-weight: 500;
-  display: inline-block;
-  min-width: 29px;
-  z-index: 1;
-}
-.image2Icon {
-  width: 23px;
-  height: 23px;
-  position: absolute;
-  margin: 0 !important;
-  top: -2px;
-  left: calc(50% - 11.5px);
-  object-fit: cover;
-  z-index: 1;
-}
-.airdropButton {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 0 0;
-  position: relative;
-}
-.frameGroup {
-  align-self: stretch;
-  flex-direction: row;
-  gap: var(--gap-27xl-8);
-}
-.actionsInner,
-.exchangeBackgroundParent,
-.frameGroup,
-.friendsButton {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-}
-.friendsButton {
-  width: 179px;
-  flex-direction: column;
-  padding: var(--padding-7xs) 0 0;
-  box-sizing: border-box;
-}
-.actionsInner,
-.exchangeBackgroundParent {
+
+.bottomnavmain,
+.bottomnavmainc {
   flex-direction: row;
   max-width: 100%;
 }
-.exchangeBackgroundParent {
+.bottomnavmainc {
   flex: 1;
   padding: var(--padding-8xs);
   box-sizing: border-box;
   position: relative;
   gap: var(--gap-13xl);
 }
-.actionsInner {
+.bottomnavmain {
   position: fixed;
   align-self: stretch;
   z-index: 3;
@@ -238,12 +59,12 @@
   background-color: var(--color-darkslategray-300) !important;
 }
 @media screen and (max-width: 396px) {
-  .exchangeBackgroundParent {
+  .bottomnavmainc {
     flex-wrap: nowrap;
   }
 }
 @media screen and (max-width: 357px) {
-  .exchangeBackgroundParent {
+  .bottomnavmainc {
     gap: var(--gap-base);
   }
 }

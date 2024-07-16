@@ -14,13 +14,12 @@ const BottomNav: NextPage<BottomNavType> = ({ className = "" }) => {
   console.log("pathname",pathname)
 
   return (
-    <div className={[styles.actionsInner, className].join(" ")}>
-      <div className={styles.exchangeBackgroundParent}>
-        {/* <div className={styles.exchangeBackground} /> */}
-        <div className={styles.frameParent}>
+    <div className={[styles.bottomnavmain, className].join(" ")}>
+      <div className={styles.bottomnavmainc}>
+        <div className={styles.bottomnavmaincinna}>
           <Link href={`/`}  className={styles.link}>
               <img
-                className={styles.unionIcon}
+                className={styles.icon}
                 loading="lazy"
                 alt=""
                 src="/union-2.svg"
@@ -29,7 +28,7 @@ const BottomNav: NextPage<BottomNavType> = ({ className = "" }) => {
           </Link>
           <Link href={`/mine`} className={styles.link}>
               <img
-                className={styles.groupIcon}
+                className={styles.icon}
                 loading="lazy"
                 alt=""
                 src="/group@2x.png"
@@ -39,7 +38,7 @@ const BottomNav: NextPage<BottomNavType> = ({ className = "" }) => {
 
           <Link href={`/community`} className={styles.link}>
               <img
-                className={styles.groupIcon1}
+                className={styles.icon}
                 loading="lazy"
                 alt=""
                 src="/group-1.svg"
@@ -49,7 +48,7 @@ const BottomNav: NextPage<BottomNavType> = ({ className = "" }) => {
 
           <Link href={`/tasks`} className={styles.link}>
               <img
-                className={styles.earnButtonChild}
+                className={styles.icon}
                 loading="lazy"
                 alt=""
                 src="/group-8@2x.png"
@@ -58,25 +57,21 @@ const BottomNav: NextPage<BottomNavType> = ({ className = "" }) => {
           </Link>
 
           <Link href={`/airdrop`} className={styles.link}>
-              <Image
+              <img
                 loading="lazy"
                 alt="image"
                 src="/group-9-2.svg"
-                width={28}
-                height={28}
-                style={{marginTop: '-8px'}}
+                className={styles.icon}
               />
               <div className={styles.txt}>Airdrop</div>
           </Link>
 
           <Link href={`/testnet`} className={styles.link}>
-              <Image
-                
+              <img
                 loading="lazy"
                 alt="image"
-                width={22}
-                height={22}
                 src="/frdlogo300.png"
+                className={styles.icon}
               />
               <div className={styles.txt}>Testnet</div>
           </Link>
