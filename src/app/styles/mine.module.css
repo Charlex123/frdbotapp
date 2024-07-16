@@ -1,350 +1,33 @@
-.unionIcon {
-  position: relative;
-  width: 0;
-  height: 0;
-  display: none;
-}
-.frameChild {
-  position: absolute;
+.minemain {
   height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: var(--br-xs);
-  background-color: rgba(50, 54, 59, 0.7);
-}
-.mine {
-  position: absolute;
-  top: 60%;
-  left: 27.72%;
-  letter-spacing: -0.02em;
-  line-height: 10px;
-  font-weight: 500;
-  display: inline-block;
-  min-width: 20px;
-}
-.unionIcon1 {
-  width: 24px;
-  height: 24px;
-  position: relative;
-}
-.exchange {
-  position: relative;
-  line-height: 10px;
-  font-weight: 500;
-  display: inline-block;
-  min-width: 40px;
-}
-.unionParent {
-  position: absolute;
-  height: 83.33%;
-  width: 17.66%;
-  top: 8.33%;
-  right: 80.98%;
-  bottom: 8.33%;
-  left: 1.36%;
-  border-radius: var(--br-5xs);
-  background-color: var(--color-gray-400);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: var(--padding-8xs) var(--padding-3xs);
-  box-sizing: border-box;
-  gap: var(--gap-11xs);
-  color: var(--color-white);
-}
-.airdrop,
-.earn,
-.friends {
-  position: absolute;
-  top: 60%;
-  left: 47.55%;
-  letter-spacing: -0.02em;
-  line-height: 10px;
-  font-weight: 500;
-  display: inline-block;
-  min-width: 29px;
-}
-.airdrop,
-.earn {
-  top: 61.67%;
-  left: 69.84%;
-  min-width: 18px;
-}
-.airdrop {
-  top: 60%;
-  left: 87.77%;
-  min-width: 29px;
-}
-.image2Icon {
-  height: 38.33%;
-  width: 6.25%;
-  top: 15%;
-  right: 5.16%;
-  bottom: 46.67%;
-  left: 88.59%;
-  object-fit: cover;
-}
-.frameItem,
-.groupIcon,
-.groupIcon1,
-.image2Icon {
-  position: absolute;
-  max-width: 100%;
+  background-color: var(--color-dark-bg);
   overflow: hidden;
-  max-height: 100%;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-4xs);
+  color: var(--color-gray-300);
+  font-family: var(--font-roboto);
 }
-.groupIcon {
-  height: 33.33%;
-  width: 5.43%;
-  top: 18.33%;
-  right: 66.85%;
-  bottom: 48.33%;
-  left: 27.72%;
-  object-fit: contain;
-}
-.frameItem,
-.groupIcon1 {
-  height: 26.5%;
-  width: 8.32%;
-  top: 21.67%;
-  right: 44.67%;
-  bottom: 51.83%;
-  left: 47.01%;
-}
-.frameItem {
-  height: 31.67%;
-  width: 6.85%;
-  top: 18.33%;
-  right: 24.95%;
-  bottom: 50%;
-  left: 68.21%;
-  object-fit: cover;
-}
-.rectangleParent {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.minemainInner {
-  position: absolute;
-  top: 834px;
-  left: 30px;
-  width: 368px;
-  height: 60px;
-  display: none;
-}
-.frameInner,
-.levelProgressChild {
-  position: absolute;
-  left: 0;
-  border-radius: var(--br-31xl);
-}
-.levelProgressChild {
-  top: -103px;
-  background: linear-gradient(180deg, #212429, #f9d838);
-  width: 428px;
-  height: 296px;
-}
-.frameInner {
-  top: 0;
-  background-color: var(--color-gold);
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-.levelProgress,
-.levelProgressInner {
-  position: absolute;
-  left: 0;
-  width: 428px;
-}
-.levelProgressInner {
-  top: 72.1px;
-  border-radius: var(--br-31xl);
-  background-color: var(--color-gold);
-  height: 810.6px;
-  z-index: 1;
-}
-.levelProgress {
-  top: 0;
-  height: 882.7px;
-}
-.profitProgressChild {
-  width: 428px;
-  height: 851.6px;
-  position: relative;
-  border-radius: var(--br-31xl);
-  background-color: var(--color-darkslategray-200);
-  display: none;
-  max-width: 100%;
-}
-.earnPerTap {
-  position: relative;
-  letter-spacing: -0.02em;
-  line-height: 110%;
-  font-weight: 500;
-  display: inline-block;
-  min-width: 57px;
-}
-.frameChild1 {
-  height: 15px;
-  width: 15px;
-  position: relative;
-  min-height: 15px;
-}
-.profitValueK {
-  position: relative;
-  letter-spacing: -0.02em;
-  line-height: 110%;
-  font-weight: 600;
-  display: inline-block;
-  min-width: 19px;
-  white-space: nowrap;
-}
-.earnPerTapParent,
-.frameGroup {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.frameGroup {
-  flex-direction: row;
-  padding: 0 var(--padding-3xs);
-  gap: var(--gap-10xs);
-  color: var(--color-white);
-}
-.earnPerTapParent {
-  border-radius: var(--br-3xs);
-  background-color: var(--color-darkslategray-100);
-  overflow: hidden;
-  flex-direction: column;
-  padding: var(--padding-5xs) var(--padding-11xl);
-  gap: var(--gap-6xs);
-}
-.coinsToLevel,
-.m {
-  position: relative;
-  letter-spacing: -0.02em;
-  line-height: 110%;
-  font-weight: 500;
-  display: inline-block;
-  min-width: 78px;
-}
-.m {
-  font-weight: 600;
-  min-width: 25px;
-}
-.coinsToLevelUpParent,
-.mWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.mWrapper {
-  flex-direction: row;
-  padding: 0 20px;
-  color: var(--color-white);
-}
-.coinsToLevelUpParent {
-  border-radius: var(--br-3xs);
-  background-color: var(--color-darkslategray-100);
-  overflow: hidden;
-  flex-direction: column;
-  padding: var(--padding-5xs) 19px 11px;
-  gap: var(--gap-6xs);
-  color: #6f72e2;
-}
-.profitPerHour {
-  position: relative;
-  letter-spacing: -0.02em;
-  line-height: 110%;
-  font-weight: 500;
-  display: inline-block;
-  min-width: 69px;
-}
-.frameChild2 {
-  height: 15px;
-  width: 15px;
-  min-height: 15px;
-}
-.frameChild2,
-.k,
-.vectorIcon {
-  position: relative;
-}
-.k {
-  letter-spacing: -0.02em;
-  line-height: 110%;
-  font-weight: 600;
-  display: inline-block;
-  min-width: 47px;
-}
-.vectorIcon {
-  height: 15px;
-  width: 15px;
-  min-height: 15px;
-}
-.frameContainer,
-.profitPerHourParent {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.frameContainer {
-  flex-direction: row;
-  gap: var(--gap-10xs);
-  color: var(--color-white);
-}
-.profitPerHourParent {
-  border-radius: var(--br-3xs);
-  background-color: var(--color-darkslategray-100);
-  overflow: hidden;
-  flex-direction: column;
-  padding: var(--padding-5xs) 17px;
-  gap: var(--gap-6xs);
-  color: #84cb69;
-}
-.frameParent,
-.licenseContainerParent {
+.mined {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-}
-.frameParent {
-  margin: 0;
-  flex-direction: row;
-  gap: var(--gap-4xs);
-  white-space: nowrap;
-  z-index: 3;
-  text-align: left;
-  font-size: var(--font-size-2xs);
-  color: #f79841;
-  font-family: var(--font-roboto);
-}
-.licenseContainerParent {
   align-self: stretch;
   flex-direction: column;
   gap: 23px;
   max-width: 100%;
 }
-.profitProgress,
+.minec,
 .minemain {
   width: 100%;
   border-top-left-radius: var(--br-31xl);border-top-right-radius: var(--br-31xl);
 }
-.profitProgress {
+.minec {
   position: absolute;
   top: 180px;
   bottom: 0;
-  overflow: hidden;
+  overflow-y: auto;
   align-self: stretch;
   background-color: var(--color-darkslategray-300);
   border-top-left-radius: var(--br-31xl);
@@ -359,24 +42,13 @@
   z-index: 2;
 
 }
-.minemain {
-  height: 926px;
-  position: relative;
-  background-color: var(--color-dark-bg);
-  overflow: hidden;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  font-size: var(--font-size-4xs);
-  color: var(--color-gray-300);
-  font-family: var(--font-roboto);
-}
+
 @media screen and (max-width: 407px) {
   .frameParent {
     flex-wrap: wrap;
   }
   .minemain {
     height: 100%;
-    min-height: 926px;
+    min-height: 100%;
   }
 }

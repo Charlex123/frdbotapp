@@ -8,7 +8,7 @@ import Header from "../components/Header";
 import BottomNav from "../components/BottomNav";
 import DailyCombo from "./components/DailyCombo";
 import TapComponent from "../components/TapComponent";
-import LevelInfo from "../components/LevelInfo";
+import Points from "../components/Points";
 
 const Mine: NextPage = () => {
   
@@ -16,11 +16,10 @@ const Mine: NextPage = () => {
     <div className={styles.minemain}>
       {/* <img className={styles.unionIcon} alt="" src="/union.svg" /> */}
       <Header />
-      <div className={styles.profitProgress}>
+      <div className={styles.minec}>
         <DailyCombo />
-        <div className={styles.profitProgressChild} />
-        <div className={styles.licenseContainerParent}>
-          <LevelInfo />
+        <div className={styles.mined}>
+          <Points points={459000} />
           <LicenseContainer />
           <MineTabs />
           <TapComponent />

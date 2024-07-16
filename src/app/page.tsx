@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import TopNav from "./components/TopNav";
 import Header from "./components/Header";
-import LevelInfo from "./components/LevelInfo";
+import Points from "./components/Points";
 import Footer from "./components/Footer";
 import styles from "./styles/index.module.css";
 import "./styles/global.css";
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
         <div className={styles.gameInfo}>
           <div className={styles.componentParent}>
             <TopNav />
-            <LevelInfo />
+            <Points points={567000}/>
             <TapComponent />
           </div>
           <Footer />
