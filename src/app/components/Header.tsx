@@ -36,7 +36,6 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
             {exchanges && <Exchanges selectedexchange={selectedExchange}  toggleDisplay={toggleExchangesDisplay} onExchangeSelect={handleExchangeSelect} />}
             {settings && <Settings toggleDisplay={toggleSettings} />}
             <div className={styles.head}>
-                <TopHeader />
                 <div className={styles.profile}>
                     <Image src="/frdlogo300.png" alt="user profile" width={30} height={30} className={styles.pimage} />
                     <div className={styles.badge}>Charles More (Gamer Supa)</div>

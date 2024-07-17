@@ -10,24 +10,12 @@ import TapComponent from "./components/TapComponent";
 const Home: NextPage = () => {
   return (
     <>
-      <div className={styles.root}>
+      <div className={styles.main}>
         <Header />
-        {/* <main className={styles.rectangleParent}>
-          <div className={styles.frameChild} />
-          <img
-            className={styles.image1Icon}
-            loading="lazy"
-            alt=""
-            src="/image-1@2x.png"
-          />
-        </main> */}
-        <img className={styles.unionIcon} alt="" src="/union.svg" />
-        <div className={styles.gameInfo}>
-          <div className={styles.componentParent}>
+        <div className={styles.mainc}>
             <TopNav />
             <Points points={567000}/>
             <TapComponent />
-          </div>
           <Footer />
         </div>
       </div>

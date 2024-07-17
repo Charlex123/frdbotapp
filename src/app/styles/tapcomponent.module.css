@@ -5,7 +5,7 @@
   .tap {
     position: relative;
     bottom: 0;
-    overflow: hidden;
+    overflow-y: auto;
     background-color: var(--color-darkslategray-300);
     border-top-left-radius: var(--br-31xl);
     border-top-right-radius: var(--br-31xl);

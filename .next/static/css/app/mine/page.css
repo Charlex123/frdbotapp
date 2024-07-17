@@ -520,22 +520,6 @@
   }
   
 /*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/topheader.module.css ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************/
-.topheader_top__kPIFo {
-    display: flex;flex-direction: row;align-items: center;width: 100%;margin: auto;text-align: center;
-    flex-wrap: nowrap;color: var(--color-white);
-}
-.topheader_top__kPIFo > div {
-    margin: auto;text-align: center;
-}
-.topheader_top__kPIFo > div button {
-    background: none;border: none;background-color: none;color: var(--color-white);
-}
-
-
-  
-/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/exchanges.module.css ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************/
 .exchanges_exchanges__JHrud {color: var(--color-white);padding: var(--padding-xs) var(--padding-lg);font-family: var(--font-roboto);
@@ -686,6 +670,22 @@
 }
 
 
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/topheader.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+.topheader_top__kPIFo {
+    display: flex;flex-direction: row;align-items: center;width: 100%;margin: auto;text-align: center;
+    flex-wrap: nowrap;color: var(--color-white);
+}
+.topheader_top__kPIFo > div {
+    margin: auto;text-align: center;
+}
+.topheader_top__kPIFo > div button {
+    background: none;border: none;background-color: none;color: var(--color-white);
+}
+
+
+  
 /*!******************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/settings.module.css ***!
   \******************************************************************************************************************************************************************************************************************************************************************************/
@@ -1085,7 +1085,7 @@
   .tapcomponent_tap__vmFR2 {
     position: relative;
     bottom: 0;
-    overflow: hidden;
+    overflow-y: auto;
     background-color: var(--color-darkslategray-300);
     border-top-left-radius: var(--br-31xl);
     border-top-right-radius: var(--br-31xl);
