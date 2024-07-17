@@ -1076,13 +1076,13 @@
   }
   
 /*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/tabcomponent.module.css ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/tapcomponent.module.css ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************/
-.tabcomponent_tap__9mLvi,
-  .tabcomponent_root__Qwr1Z {
+.tapcomponent_tap__vmFR2,
+  .tapcomponent_root__yk0_R {
     box-sizing: border-box;
   }
-  .tabcomponent_tap__9mLvi {
+  .tapcomponent_tap__vmFR2 {
     position: relative;
     bottom: 0;
     overflow: hidden;
@@ -1095,28 +1095,31 @@
     outline: none !important;
     height: auto !important;
     margin-bottom: 70px !important;
+    margin: auto;
+    text-align: center;
     z-index: 2;
   } 
-  .tabcomponent_tapChild__b1imD,
-  .tabcomponent_tapimage__fA8__ {
+  .tapcomponent_tapChild__btY9Y,
+  .tapcomponent_tapimage__kPDgW {
     position: relative;
     max-width: 100%;
     outline: none !important;
   }
-  .tabcomponent_tapc__0ivDo {
+  .tapcomponent_tapc__xsfaX {
     align-items: center;
     padding: 0 0;
     position: relative;
     margin: 20px auto !important;
+    height: 300px;
     text-align: center;
     box-sizing: border-box;
     border-radius: 50%;
-    max-width: auto;
-    padding: var(--padding-13xl);
+    max-width: 300px;
+    padding: 60px;
     background-color: var(--color-lightsandybrown);
     outline: none !important;
   }
-  .tabcomponent_tapimage__fA8__ {
+  .tapcomponent_tapimage__kPDgW {
     width: 100%;
     height: 100%;
     margin: auto;
@@ -1125,21 +1128,44 @@
     z-index: 3;
     outline: none !important;
   }
-  .tabcomponent_componentParent__BQaKd,
-  .tabcomponent_tap__9mLvi,
-  .tabcomponent_root__Qwr1Z {
+  .tapcomponent_componentParent__5L0RM,
+  .tapcomponent_tap__vmFR2,
+  .tapcomponent_root__yk0_R {
     display: flex;
     flex-direction: column;
   }
-  .tabcomponent_componentParent__BQaKd {
+  .tapcomponent_componentParent__5L0RM {
     align-items: flex-start;
     justify-content: flex-start;
     padding: 0;
     max-width: 100%;
   }
    
+  @keyframes tapcomponent_bounce-all-sides__23fML {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(-30px, -30px);
+    }
+    50% {
+      transform: translate(30px, 30px);
+    }
+    75% {
+      transform: translate(-30px, 30px);
+    }
+  }
+  
+  .tapcomponent_bounce-all-sides__23fML {
+    animation: tapcomponent_bounce-all-sides__23fML 0.5s infinite;
+  }
+  
+  
+  
+
+  
   @media screen and (max-width: 381px) {
-    .tabcomponent_tap__9mLvi {
+    .tapcomponent_tap__vmFR2 {
       box-sizing: border-box;
     }
   }

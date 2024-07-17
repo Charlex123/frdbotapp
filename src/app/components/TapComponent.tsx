@@ -1,7 +1,7 @@
 'use client';
 import { useState } from "react";
 import type { NextPage } from "next";
-import styles from "../styles/tabcomponent.module.css";
+import styles from "../styles/tapcomponent.module.css";
 import Boost from "@/app/components/Boost";
 import AnimatedText from "./AnimatedText";
 
@@ -10,6 +10,7 @@ const TapComponent: NextPage = () => {
   const [animations, setAnimations] = useState<{ id: number; x: number; y: number; number: number }[]>([]);
   const [sum, setSum] = useState<number>(0);
   const [number_, setNumber_] = useState<number>(4) 
+  const [bounce, setBounce] = useState<boolean>(false);
 
   const handleImageClick = (e: React.MouseEvent<HTMLImageElement>) => {
     const imgRect = e.currentTarget.getBoundingClientRect();
@@ -28,6 +29,10 @@ const TapComponent: NextPage = () => {
       console.log('summm',sum)
       return newSum;
     });
+
+    // Trigger the combined bounce animation
+    setBounce(true);
+    setTimeout(() => setBounce(false), 1000); // Remove the class after the animation duration
   };
 
   const handleAnimationEnd = (id: number) => {
@@ -56,7 +61,7 @@ const TapComponent: NextPage = () => {
     <div className={styles.tap}>
       {/* <img className={styles.unionIcon} alt="" src="/union.svg" /> */}
         <div className={styles.tapc}>
-            <img className={styles.tapimage} alt="" src="/soccer.png"  onClick={handleImageClick}
+            <img className={`${styles.tapimage} ${bounce ? styles['bounce-all-sides'] : ''}`} alt="" src="/soccer.png"  onClick={handleImageClick}
         style={{ cursor: 'pointer', outline: 'none' }}/>
         {animations.map(({ id, x, y, number }) => (
           <AnimatedText

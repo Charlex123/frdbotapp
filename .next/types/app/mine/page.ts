@@ -1,4 +1,4 @@
-// File: /Applications/XAMPP/xamppfiles/htdocs/frdbotapp/src/app/mine/page.tsx
+// File: /Applications/XAMPP/xamppfiles/htdocs/frdbotapp/frontend/src/app/mine/page.tsx
 import * as entry from '../../../../src/app/mine/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
