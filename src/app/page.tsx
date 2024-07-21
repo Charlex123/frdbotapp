@@ -1,3 +1,5 @@
+'use client'
+import React, { useState } from 'react';
 import type { NextPage } from "next";
 import TopNav from "./components/TopNav";
 import Header from "./components/Header";
@@ -8,6 +10,9 @@ import "./styles/global.css";
 import TapComponent from "./components/TapComponent";
 
 const Home: NextPage = () => {
+
+  
+
   return (
     <>
       <div className={styles.main}>
