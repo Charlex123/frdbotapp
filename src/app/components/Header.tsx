@@ -43,7 +43,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
             <div className={styles.head}>
                 <div className={styles.profile}>
                     <Image src="/frdlogo300.png" alt="user profile" width={30} height={30} className={styles.pimage} />
-                    <div className={styles.badge}>{user?.firstName} (Crypt Lord)</div>
+                    <div className={styles.badge}>{user?.firstName} (Crypto Lord)</div>
                 </div>
                 <nav className={[styles.userinfo, className].join(" ")}>
                     <div className={styles.level}>
