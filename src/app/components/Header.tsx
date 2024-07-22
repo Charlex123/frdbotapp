@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import type { NextPage } from "next";
-import { useInitData, useLaunchParams, type User } from '@telegram-apps/sdk-react';
+import { TelegramProvider, useTelegram } from "../provider";
 import { List, Placeholder } from '@telegram-apps/telegram-ui';
 import Image from "next/image";
 import styles from "../styles/header.module.css";
@@ -16,8 +16,7 @@ export type HeaderType = {
 };
 
 const Header: NextPage<HeaderType> = ({ className = "" }) => {
-    const initData = useInitData();
-    const user = initData!.user;
+    const { user, webApp } = useTelegram();
     const [selectedExchange, setSelectedExchange] = useState<string>('');
     const [exchanges, setExchanges] = useState(false);
     const [settings, setSettings] = useState(false);
@@ -43,7 +42,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
             <div className={styles.head}>
                 <div className={styles.profile}>
                     <Image src="/frdlogo300.png" alt="user profile" width={30} height={30} className={styles.pimage} />
-                    <div className={styles.badge}>{user?.firstName} (Crypto Lord)</div>
+                    <div className={styles.badge}>{user?.first_name} (Crypto Lord)</div>
                 </div>
                 <nav className={[styles.userinfo, className].join(" ")}>
                     <div className={styles.level}>
