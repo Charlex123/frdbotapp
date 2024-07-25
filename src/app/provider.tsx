@@ -40,7 +40,7 @@ export const TelegramProvider = ({
       console.log("t user id",app.initDataUnsafe?.user?.id)
       alert(app.initDataUnsafe?.user?.id)
       const addUser = async (chat_id: number) => {
-        alert('add user function ran')
+        alert(`'add user function ran',${chat_id}`)
         try {
           const response = await axios.post(`${apiUrl}/api/users/adduser`, { chat_id });
           if (response.status === 201) {
