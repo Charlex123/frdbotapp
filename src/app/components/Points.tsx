@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+
 import styles from "../styles/points.module.css";
 
 export type PointsType = {
@@ -7,6 +8,8 @@ export type PointsType = {
 };
 
 const Points: NextPage<PointsType> = ({ className = "", points }) => {
+  
+
   return (
     <>
       <div className={[styles.points, className].join(" ")}>

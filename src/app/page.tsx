@@ -1,16 +1,18 @@
 'use client'
-import React, { useState } from 'react';
+import React from 'react';
 import type { NextPage } from "next";
+import { useAppUser } from './provider';
 import TopNav from "./components/TopNav";
 import Header from "./components/Header";
 import Points from "./components/Points";
 import Footer from "./components/Footer";
 import styles from "./styles/index.module.css";
+import Loading from './components/Loading'; 
 import "./styles/global.css";
 import TapComponent from "./components/TapComponent";
 
 const Home: NextPage = () => {
-
+  const { appuser } = useAppUser();
   
 
   return (
@@ -19,7 +21,7 @@ const Home: NextPage = () => {
         <Header />
         <div className={styles.mainc}>
             <TopNav />
-            <Points points={567000}/>
+            {appuser ? <Points points={appuser!.points}/> : <Loading/>}
             <TapComponent />
           <Footer />
         </div>

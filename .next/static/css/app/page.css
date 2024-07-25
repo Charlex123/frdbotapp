@@ -1,3 +1,30 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/loading.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+.loading_spinner__hii1R {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999999;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: #fa940ee3;
+  animation: loading_spin__u4O20 .5s ease-in-out infinite;
+  -webkit-animation: loading_spin__u4O20 .5s ease-in-out infinite;
+}
+@keyframes loading_spin__u4O20 {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes loading_spin__u4O20 {
+  to { -webkit-transform: rotate(360deg); }
+}
 /*!***********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/styles/global.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************/

@@ -1,8 +1,8 @@
 'use client'
 import { useState } from "react";
 import type { NextPage } from "next";
-import { TelegramProvider, useTelegram } from "../provider";
-import { List, Placeholder } from '@telegram-apps/telegram-ui';
+import { useTelegram } from "../provider";
+import { useAppUser } from "../provider";
 import Image from "next/image";
 import styles from "../styles/header.module.css";
 import { FaGear } from "react-icons/fa6";
@@ -16,7 +16,8 @@ export type HeaderType = {
 };
 
 const Header: NextPage<HeaderType> = ({ className = "" }) => {
-    const { user, webApp } = useTelegram();
+    const { user } = useTelegram();
+    const { appuser } = useAppUser();
     const [selectedExchange, setSelectedExchange] = useState<string>('');
     const [exchanges, setExchanges] = useState(false);
     const [settings, setSettings] = useState(false);
@@ -48,7 +49,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
                     <div className={styles.level}>
                         <div className={styles.levelTitle}>
                             <div className={styles.currentLevel}>
-                                <div className={styles.epic}>Epic</div>
+                                <div className={styles.epic}>{appuser?.level}</div>
                                 <div className={styles.levelIcon}>
                                     <img
                                         className={styles.levelImageIcon}

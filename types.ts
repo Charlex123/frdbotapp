@@ -1,4 +1,13 @@
 // types.ts
+export interface IAppUser {
+    id: number;
+    chat_id: number;
+    level: string;
+    ref_count: number;
+    points: number;
+    referral_link: string; 
+}
+
 export interface ITelegramUser {
     id: number;
     first_name: string;
@@ -7,7 +16,7 @@ export interface ITelegramUser {
     language_code: string;
   }
   
-  export interface IWebApp {
+export interface IWebApp {
     initData: string;
     initDataUnsafe: {
       query_id: string;

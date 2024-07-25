@@ -2,14 +2,21 @@
 'use client'
 import Script from "next/script";
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
-import type { ITelegramUser, IWebApp } from "../../types";
+import type { ITelegramUser, IWebApp, IAppUser } from "../../types";
+import axios from 'axios';
 
 export interface ITelegramContext {
   webApp?: IWebApp;
   user?: ITelegramUser;
 }
 
+export interface IAppUserContext {
+    appuser?: IAppUser;
+}
+
 export const TelegramContext = createContext<ITelegramContext>({});
+
+export const AppUserContext = createContext<IAppUserContext>({});
 
 export const TelegramProvider = ({
   children,
@@ -17,14 +24,33 @@ export const TelegramProvider = ({
   children: React.ReactNode;
 }) => {
   const [webApp, setWebApp] = useState<IWebApp | null>(null);
+  const [appUser, setAppUser] = useState<IAppUser | undefined>(undefined);
+
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
 
   useEffect(() => {
     const app = (window as any).Telegram?.WebApp;
     if (app) {
       app.ready();
       setWebApp(app);
+      if (app.initDataUnsafe?.user?.id) {
+        addUser(app.initDataUnsafe.user.id);
+      }
     }
   }, []);
+
+  const addUser = async (chat_id: number) => {
+    try {
+      const response = await axios.post(`${apiUrl}/api/users/adduser`, { chat_id });
+      if (response.status === 201) {
+        setAppUser(response.data);
+      } else {
+        console.error('Failed to add user:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error adding user:', error);
+    }
+  };
 
   const value = useMemo(() => {
     return webApp
@@ -32,9 +58,18 @@ export const TelegramProvider = ({
           webApp,
           unsafeData: webApp.initDataUnsafe,
           user: webApp.initDataUnsafe.user,
+          appuser: appUser
         }
       : {};
   }, [webApp]);
+
+  const uservalue = useMemo(() => {
+    return appUser
+      ? {
+          appuser: appUser
+        }
+      : {};
+  }, [appUser]);
 
   return (
     <TelegramContext.Provider value={value}>
@@ -42,9 +77,13 @@ export const TelegramProvider = ({
       <Script
         src="https://telegram.org/js/telegram-web-app.js"
         strategy="beforeInteractive"
-      />      {children}
+      />      
+      <AppUserContext.Provider value={uservalue}>
+      {children}
+      </AppUserContext.Provider>
     </TelegramContext.Provider>
   );
 };
 
 export const useTelegram = () => useContext(TelegramContext);
+export const useAppUser = () => useContext(AppUserContext);
