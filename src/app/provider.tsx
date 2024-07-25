@@ -58,6 +58,7 @@ export const TelegramProvider = ({
           
         } catch (error) {
           console.error('Error adding user:', error);
+          alert(`error alert, ${error}`)
         } finally {
           setLoading(false); // Set loading to false after the API call
         }
