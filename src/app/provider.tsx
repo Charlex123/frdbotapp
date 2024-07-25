@@ -29,21 +29,6 @@ export const TelegramProvider = ({
 
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
 
-  useEffect(() => {
-    const app = (window as any).Telegram?.WebApp;
-    if (app) {
-      app.ready();
-      setWebApp(app);
-      if (app.initDataUnsafe?.user?.id) {
-        addUser(app.initDataUnsafe.user.id);
-      } else {
-        setLoading(false); // If there's no user ID, stop loading
-      }
-    } else {
-      setLoading(false); // If the app is not available, stop loading
-    }
-  }, []);
-
   const addUser = async (chat_id: number) => {
     try {
       const response = await axios.post(`${apiUrl}/api/users/adduser`, { chat_id });
@@ -59,6 +44,24 @@ export const TelegramProvider = ({
     }
   };
 
+  useEffect(() => {
+    const app = (window as any).Telegram?.WebApp;
+    if (app) {
+      app.ready();
+      setWebApp(app);
+      if (app.initDataUnsafe?.user?.id) {
+        setTimeout(() => {
+          addUser(app.initDataUnsafe.user.id);
+        }, 6000); // Simulate loading delay of 1 second
+      } else {
+        setLoading(false); // If there's no user ID, stop loading
+      }
+    } else {
+      setLoading(false); // If the app is not available, stop loading
+    }
+  }, []);
+
+  
   const value = useMemo(() => {
     return webApp
       ? {
