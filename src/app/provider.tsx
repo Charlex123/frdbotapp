@@ -1,4 +1,4 @@
-// TelegramProvider
+// TelegramProvider.tsx
 'use client'
 import Script from "next/script";
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
@@ -11,12 +11,12 @@ export interface ITelegramContext {
 }
 
 export interface IAppUserContext {
-    appuser?: IAppUser;
+  appuser?: IAppUser;
+  loading: boolean;
 }
 
 export const TelegramContext = createContext<ITelegramContext>({});
-
-export const AppUserContext = createContext<IAppUserContext>({});
+export const AppUserContext = createContext<IAppUserContext>({ loading: true });
 
 export const TelegramProvider = ({
   children,
@@ -25,6 +25,7 @@ export const TelegramProvider = ({
 }) => {
   const [webApp, setWebApp] = useState<IWebApp | null>(null);
   const [appUser, setAppUser] = useState<IAppUser | undefined>(undefined);
+  const [loading, setLoading] = useState(true);
 
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
 
@@ -35,7 +36,11 @@ export const TelegramProvider = ({
       setWebApp(app);
       if (app.initDataUnsafe?.user?.id) {
         addUser(app.initDataUnsafe.user.id);
+      } else {
+        setLoading(false); // If there's no user ID, stop loading
       }
+    } else {
+      setLoading(false); // If the app is not available, stop loading
     }
   }, []);
 
@@ -49,6 +54,8 @@ export const TelegramProvider = ({
       }
     } catch (error) {
       console.error('Error adding user:', error);
+    } finally {
+      setLoading(false); // Set loading to false after the API call
     }
   };
 
@@ -58,18 +65,16 @@ export const TelegramProvider = ({
           webApp,
           unsafeData: webApp.initDataUnsafe,
           user: webApp.initDataUnsafe.user,
-          appuser: appUser
         }
       : {};
   }, [webApp]);
 
-  const uservalue = useMemo(() => {
-    return appUser
-      ? {
-          appuser: appUser
-        }
-      : {};
-  }, [appUser]);
+  const userValue = useMemo(() => {
+    return {
+      appuser: appUser,
+      loading: loading
+    };
+  }, [appUser, loading]);
 
   return (
     <TelegramContext.Provider value={value}>
@@ -78,8 +83,8 @@ export const TelegramProvider = ({
         src="https://telegram.org/js/telegram-web-app.js"
         strategy="beforeInteractive"
       />      
-      <AppUserContext.Provider value={uservalue}>
-      {children}
+      <AppUserContext.Provider value={userValue}>
+        {children}
       </AppUserContext.Provider>
     </TelegramContext.Provider>
   );

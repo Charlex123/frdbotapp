@@ -12,21 +12,23 @@ import "./styles/global.css";
 import TapComponent from "./components/TapComponent";
 
 const Home: NextPage = () => {
-  const { appuser } = useAppUser();
-  
+  const { appuser, loading } = useAppUser();
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <>
       <div className={styles.main}>
         <Header />
         <div className={styles.mainc}>
-            <TopNav />
-            {appuser ? <Points points={appuser!.points}/> : <Loading/>}
-            <TapComponent />
+          <TopNav />
+          {appuser ? <Points points={appuser.points} /> : <p>No user data available</p>}
+          <TapComponent />
           <Footer />
         </div>
       </div>
-      
     </>
   );
 };
