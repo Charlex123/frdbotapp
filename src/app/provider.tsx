@@ -42,7 +42,7 @@ export const TelegramProvider = ({
       const addUser = async (chat_id: number) => {
         alert(`'add user function ran',${chat_id}`)
         try {
-          const response = await axios.post(`http://localhost:4000/api/users/adduser`, { chat_id });
+          const response = await axios.post(`http://localhost:4000/api/users/`, { chat_id });
           if(response) {
             setAppUser(response.data);
             alert(response.data)
