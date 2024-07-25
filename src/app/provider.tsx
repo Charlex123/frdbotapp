@@ -47,7 +47,7 @@ export const TelegramProvider = ({
                     "Content-type": "application/json"
                 }
             }
-          const { data } = await axios.post(`http://localhost:4000/api/users/`, { 
+          const { data } = await axios.post("http://localhost:4000/api/users", { 
             chat_id: chat_id 
             }, config);
             alert(data)
