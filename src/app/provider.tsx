@@ -29,20 +29,7 @@ export const TelegramProvider = ({
 
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
 
-  const addUser = async (chat_id: number) => {
-    try {
-      const response = await axios.post(`${apiUrl}/api/users/adduser`, { chat_id });
-      if (response.status === 201) {
-        setAppUser(response.data);
-      } else {
-        console.error('Failed to add user:', response.statusText);
-      }
-    } catch (error) {
-      console.error('Error adding user:', error);
-    } finally {
-      setLoading(false); // Set loading to false after the API call
-    }
-  };
+  
 
   useEffect(() => {
     const app = (window as any).Telegram?.WebApp;
@@ -52,14 +39,24 @@ export const TelegramProvider = ({
       app.ready();
       console.log("t user id",app.initDataUnsafe?.user?.id)
       alert(app.initDataUnsafe?.user?.id)
+      const addUser = async (chat_id: number) => {
+        alert('add user function ran')
+        try {
+          const response = await axios.post(`${apiUrl}/api/users/adduser`, { chat_id });
+          if (response.status === 201) {
+            setAppUser(response.data);
+          } else {
+            console.error('Failed to add user:', response.statusText);
+          }
+        } catch (error) {
+          console.error('Error adding user:', error);
+        } finally {
+          setLoading(false); // Set loading to false after the API call
+        }
+      };
+      addUser(app.initDataUnsafe?.user?.id)
       setWebApp(app);
-      if (app.initDataUnsafe?.user?.id) {
-        setTimeout(() => {
-          addUser(app.initDataUnsafe.user.id);
-        }, 6000); // Simulate loading delay of 1 second
-      } else {
-        setLoading(false); // If there's no user ID, stop loading
-      }
+      
     } else {
       setLoading(false); // If the app is not available, stop loading
     }
