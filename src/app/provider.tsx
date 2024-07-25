@@ -46,8 +46,12 @@ export const TelegramProvider = ({
 
   useEffect(() => {
     const app = (window as any).Telegram?.WebApp;
+    
+    console.log("Checking for Telegram WebApp:", app); // Debug logging
     if (app) {
       app.ready();
+      console.log("t user id",app.initDataUnsafe?.user?.id)
+      alert(app.initDataUnsafe?.user?.id)
       setWebApp(app);
       if (app.initDataUnsafe?.user?.id) {
         setTimeout(() => {
