@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export type BoostType = {
   className?: string;
-  dailypoints: number;
+  dailypoints?: number;
 };
 
 const Boost: NextPage<BoostType> = ({ className = "", dailypoints }) => {
@@ -19,7 +19,7 @@ const Boost: NextPage<BoostType> = ({ className = "", dailypoints }) => {
             alt=""
             src="/vector-2.svg"
           />
-          <div className={styles.boosterinna}>{dailypoints} / {dailypoints}</div>
+          <div className={styles.boosterinna}>{dailypoints!.toLocaleString()} / {dailypoints!.toLocaleString()}</div>
         </div>
         <div className={styles.boost_b}>
           <Link href={`/mine`} className={styles.linka}>
