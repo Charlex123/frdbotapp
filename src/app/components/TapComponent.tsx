@@ -19,7 +19,8 @@ const TapComponent: NextPage = () => {
       return;
     }
 
-    const chat_id = user.id;
+    // const chat_id = user.id;
+    const chat_id = 730149343;
     const imgRect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - imgRect.left;
     const y = e.clientY - imgRect.top;
@@ -38,12 +39,13 @@ const TapComponent: NextPage = () => {
           'Content-Type': 'application/json',
         },
       });
-
+      
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
 
       const data = await response.json();
+      console.log("res data",response, data)
       const newTotalPoints = data.totalpoints + number;
 
       await fetch(`${apiUrl}/api/users/${chat_id}/updatetotalpoints`, {
@@ -55,7 +57,7 @@ const TapComponent: NextPage = () => {
       });
 
       // Refresh context here
-      await fetchAndUpdateUser(chat_id);
+      await fetchAndUpdateUser(730149343);
     } catch (error) {
       console.error('Failed to update total points:', error);
     }
