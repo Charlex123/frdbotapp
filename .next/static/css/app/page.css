@@ -1526,62 +1526,6 @@ body {
     }
   }
   
-/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/boost.module.css ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************/
-.boost_actions__S0jpG {
-    position: relative;
-    font-size: var(--font-size-xs);
-    color: var(--color-white);
-    font-family: var(--font-roboto);
-    overflow: hidden;
-    width: 100%;
-    padding: var(--padding-12xs) var(--padding-8xs);
-  }
-  .boost_boostIcon__kThLd {
-    height: 100%;
-    width: 27.4px;
-    position: relative;
-    margin: 0 !important;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    max-height: 100%;
-    object-fit: contain;
-  }
-  .boost_boost__dC3S0 {
-    min-width: 36px;
-  }
-  .boost_actions__S0jpG,
-  .boost_boostAction__ry4vp {
-    align-self: center;
-    display: flex;
-  }
-  .boost_boostAction__ry4vp {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--padding-3xs-8) 0 var(--padding-3xs-8) 0;
-    position: relative;font-size: var(--font-size-lg);
-    width: 100%;
-  }
-  .boost_boostAction__ry4vp .boost_boost_a__8uztV {
-    display: flex;flex-direction: row;align-items: center;justify-content: flex-start;
-  }
-  .boost_boostAction__ry4vp .boost_boost_a__8uztV .boost_boosterinna__JWN61 {
-    padding-left: var(--padding-8xs);
-  }
-  .boost_boostAction__ry4vp .boost_boost_b__ABnPu .boost_linka__vt4jX {
-    background-color: var(--color-dimgreen);border-radius: var(--br-xs);color: var(--color-white);
-    padding: var(--padding-8xs) var(--padding-3xs-8);text-decoration: none !important;
-  }
-  @media screen and (max-width: 219px) {
-    .boost_boostAction__ry4vp {
-      flex-wrap: nowrap;
-    }
-  }
-  
 /*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/animatedtext.module.css ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************/
