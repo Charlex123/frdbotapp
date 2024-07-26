@@ -3,25 +3,24 @@ import { useState } from "react";
 import type { NextPage } from "next";
 import styles from "../styles/tapcomponent.module.css";
 import Boost from "@/app/components/Boost";
-import { useAppUser, useTelegram } from "../provider";
+import { useTelegram } from "../provider";
+import { useAppUser } from "../provider";
 import AnimatedText from "./AnimatedText";
 
 const TapComponent: NextPage = () => {
   const [animations, setAnimations] = useState<{ id: number; x: number; y: number; number: number }[]>([]);
   const [bounce, setBounce] = useState<boolean>(false);
-  const { appuser, fetchAndUpdateUser } = useAppUser();
   const { user } = useTelegram();
+  const { appuser, fetchAndUpdateUser } = useAppUser();
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
 
-  console.log("app user",appuser)
   const handleImageClick = async (e: React.MouseEvent<HTMLImageElement>) => {
     if (!user) {
       console.error('User not found');
       return;
     }
 
-    // const chat_id = user.id;
-    const chat_id = 730149343;
+    const chat_id = user.id;
     const imgRect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - imgRect.left;
     const y = e.clientY - imgRect.top;
@@ -71,6 +70,7 @@ const TapComponent: NextPage = () => {
     setAnimations((prev) => prev.filter((anim) => anim.id !== id));
   };
 
+  console.log("app user o00",appuser)
   return (
     <div className={styles.tap}>
       <div className={styles.tapc}>
@@ -91,7 +91,7 @@ const TapComponent: NextPage = () => {
           />
         ))}
       </div>
-      <Boost dailypoints={appuser!.dailypoints} dailypointscounter={appuser!.dailypointscounter}/>
+      {appuser ? <Boost dailypoints={appuser.dailypoints} dailypointscounter={appuser.dailypoints}/> : ''}
     </div>
   );
 };

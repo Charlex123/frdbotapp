@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export type BoostType = {
   className?: string;
-  dailypointscounter: number;
+  dailypointscounter?: number;
   dailypoints?: number;
 };
 
