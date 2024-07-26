@@ -93,6 +93,8 @@
   font-weight: 600;
   display: inline-block;
   min-width: 13px;
+  font-size: 12px;
+  text-transform: capitalize;
 }
 .levelImageIcon {
   width: 2px;

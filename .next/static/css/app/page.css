@@ -456,6 +456,8 @@ body {
   font-weight: 600;
   display: inline-block;
   min-width: 13px;
+  font-size: 12px;
+  text-transform: capitalize;
 }
 .header_levelImageIcon__j0_dH {
   width: 2px;

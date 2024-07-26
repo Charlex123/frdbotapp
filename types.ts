@@ -3,8 +3,13 @@ export interface IAppUser {
     id: number;
     chat_id: number;
     level: string;
+    levelpoint: number;
+    multiplier: number;
+    exchange: string;
     ref_count: number;
-    points: number;
+    totalpoints: number;
+    dailypoints: number;
+    dailypointscounter: number;
     referral_link: string; 
 }
 

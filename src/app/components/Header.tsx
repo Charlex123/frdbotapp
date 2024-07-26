@@ -60,8 +60,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
                                 </div>
                             </div>
                             <div className={styles.level610}>
-                                <span>{`Level `}</span>
-                                <span className={styles.span}>6/10</span>
+                                <span className={styles.span}>{appuser?.levelpoint}/10</span>
                             </div>
                         </div>
                         <div className={styles.rectangleParent}>

@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <Header />
         <div className={styles.mainc}>
           <TopNav />
-          {appuser ? <Points points={appuser.points} /> : <p>No user data available</p>}
+          {appuser ? <Points points={appuser.totalpoints} /> : <p>No user data available</p>}
           <TapComponent />
           <Footer />
         </div>
