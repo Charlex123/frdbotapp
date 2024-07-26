@@ -54,6 +54,7 @@ export const TelegramProvider = ({
     if (app) {
       app.ready();
       const chat_id = app.initDataUnsafe?.user?.id;
+    // const chat_id = 730149343;
       const addUser = async (chat_id: number) => {
         try {
           const response = await fetch(`${apiUrl}/api/users/adduser`, {

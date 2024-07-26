@@ -32,20 +32,20 @@ const TapComponent: NextPage = () => {
       { id, x, y, number }
     ]);
 
+    // update total points
     try {
-      const response = await fetch(`${apiUrl}/api/users/${chat_id}/gettotalpoints`, {
+      const response0 = await fetch(`${apiUrl}/api/users/${chat_id}/gettotalpoints`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         },
       });
-      
-      if (!response.ok) {
+      if (!response0.ok) {
         throw new Error('Network response was not ok');
       }
 
-      const data = await response.json();
-      const newTotalPoints = data.totalpoints + number;
+      const datatp = await response0.json();
+      const newTotalPoints = datatp.totalpoints + number;
 
       await fetch(`${apiUrl}/api/users/${chat_id}/updatetotalpoints`, {
         method: 'PUT',
@@ -55,11 +55,34 @@ const TapComponent: NextPage = () => {
         body: JSON.stringify({ totalpoints: newTotalPoints }),
       });
 
+      const response1 = await fetch(`${apiUrl}/api/users/${chat_id}/getdailypointscounter`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      if (!response1.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response1.json();
+      const newdailypointscounter = data.dailypointscounter - number;
+
+      await fetch(`${apiUrl}/api/users/${chat_id}/updatedailypointscounter`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ dailypointscounter: newdailypointscounter }),
+      });
+
       // Refresh context here
       await fetchAndUpdateUser(730149343);
     } catch (error) {
       console.error('Failed to update total points:', error);
     }
+
+   
 
     // Trigger the combined bounce animation
     setBounce(true);
@@ -70,7 +93,6 @@ const TapComponent: NextPage = () => {
     setAnimations((prev) => prev.filter((anim) => anim.id !== id));
   };
 
-  console.log("app user o00",appuser)
   return (
     <div className={styles.tap}>
       <div className={styles.tapc}>
@@ -91,7 +113,7 @@ const TapComponent: NextPage = () => {
           />
         ))}
       </div>
-      {appuser ? <Boost dailypoints={appuser.dailypoints} dailypointscounter={appuser.dailypoints}/> : ''}
+      {appuser ? <Boost dailypoints={appuser.dailypoints} dailypointscounter={appuser.dailypointscounter}/> : ''}
     </div>
   );
 };
