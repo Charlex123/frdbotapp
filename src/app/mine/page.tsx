@@ -22,7 +22,7 @@ const Mine: NextPage = () => {
       <div className={styles.minec}>
         <DailyCombo />
         <div className={styles.mined}>
-          <Points points={appuser!.dailypoints} />
+          {appuser ? <Points points={appuser.totalpoints} /> : <p>No user data available</p>}
           <LicenseContainer />
           <MineTabs />
           <TapComponent />
