@@ -13,6 +13,7 @@ const TapComponent: NextPage = () => {
   const { user } = useTelegram();
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
 
+  console.log("app user",appuser)
   const handleImageClick = async (e: React.MouseEvent<HTMLImageElement>) => {
     if (!user) {
       console.error('User not found');
@@ -45,7 +46,6 @@ const TapComponent: NextPage = () => {
       }
 
       const data = await response.json();
-      console.log("res data",response, data)
       const newTotalPoints = data.totalpoints + number;
 
       await fetch(`${apiUrl}/api/users/${chat_id}/updatetotalpoints`, {

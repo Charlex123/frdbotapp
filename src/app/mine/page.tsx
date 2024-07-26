@@ -25,7 +25,7 @@ const Mine: NextPage = () => {
           {appuser ? <Points points={appuser.totalpoints} /> : <p>No user data available</p>}
           <LicenseContainer />
           <MineTabs />
-          <TapComponent />
+          {/* <TapComponent /> */}
         </div>
         <BottomNav />
       </div>
