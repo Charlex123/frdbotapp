@@ -91,7 +91,7 @@ const TapComponent: NextPage = () => {
           />
         ))}
       </div>
-      {/* <Boost dailypoints={appuser!.dailypoints} /> */}
+      <Boost dailypoints={appuser!.dailypoints} dailypointscounter={appuser!.dailypointscounter}/>
     </div>
   );
 };
