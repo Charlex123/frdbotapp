@@ -4,7 +4,7 @@ import styles from "../styles/points.module.css";
 
 export type PointsType = {
   className?: string;
-  points: number;
+  points?: number;
 };
 
 const Points: NextPage<PointsType> = ({ className = "", points }) => {
