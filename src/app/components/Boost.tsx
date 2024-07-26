@@ -2,13 +2,17 @@ import type { NextPage } from "next";
 import BottomNav from "./BottomNav";
 import styles from "../styles/boost.module.css";
 import Link from "next/link";
+import { useAppUser } from "../provider";
 
 export type BoostType = {
   className?: string;
+  dailypointscounter: number;
   dailypoints?: number;
 };
 
-const Boost: NextPage<BoostType> = ({ className = "", dailypoints }) => {
+const Boost: NextPage<BoostType> = ({ className = "" }) => {
+  const { appuser } = useAppUser();
+
   return (
     <div className={[styles.actions, className].join(" ")}>
       <div className={styles.boostAction}>
@@ -19,7 +23,7 @@ const Boost: NextPage<BoostType> = ({ className = "", dailypoints }) => {
             alt=""
             src="/vector-2.svg"
           />
-          <div className={styles.boosterinna}>{dailypoints!.toLocaleString()} / {dailypoints!.toLocaleString()}</div>
+          <div className={styles.boosterinna}>{appuser!.dailypointscounter.toLocaleString()} / {appuser!.dailypoints.toLocaleString()}</div>
         </div>
         <div className={styles.boost_b}>
           <Link href={`/mine`} className={styles.linka}>
