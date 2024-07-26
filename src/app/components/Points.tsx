@@ -23,7 +23,7 @@ const Points: NextPage<PointsType> = ({ className = "", points }) => {
                 src="/group-9-2.svg"
               />
             </div>
-            <b className={styles.levelValue}>{points?.toLocaleString()}</b>
+            <b className={styles.levelValue}>{points!.toLocaleString()}</b>
           </div>
         </div>
       </div>
