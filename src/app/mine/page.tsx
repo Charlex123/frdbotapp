@@ -1,4 +1,5 @@
 'use client';
+import React, { useState, useEffect } from 'react';
 import type { NextPage } from "next";
 import LicenseContainer from "./components/MineLicenseContainer";
 import FrameComponent from "./components/MineFrameComponent";
@@ -12,9 +13,19 @@ import TapComponent from "../components/TapComponent";
 import Points from "../components/Points";
 
 const Mine: NextPage = () => {
-  const { appuser } = useAppUser();
+  const { appuser, loading } = useAppUser();
+  const [totalPoints, setTotalPoints] = useState<number>(0);
 
-
+  useEffect(() => {
+    if (appuser) {
+      setTotalPoints(appuser.totalpoints);
+    }
+  }, [appuser]);
+  
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  
   return (
     <div className={styles.minemain}>
       {/* <img className={styles.unionIcon} alt="" src="/union.svg" /> */}
@@ -25,7 +36,7 @@ const Mine: NextPage = () => {
           {appuser ? <Points points={appuser.totalpoints} /> : <p>No user data available</p>}
           <LicenseContainer />
           <MineTabs />
-          <TapComponent />
+          <TapComponent totalPoints={totalPoints} setTotalPoints={setTotalPoints} />
         </div>
         <BottomNav />
       </div>
