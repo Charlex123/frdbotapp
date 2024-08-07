@@ -50,7 +50,7 @@ const TapComponent: NextPage<TapComponentProps> = ({ totalPoints, setTotalPoints
      // Optimistically update total points and daily points counter
     const optimisticTotalPoints = totalPoints + number;
     let newDailyPointsCounter = dailyPointsCounter - number;
-    if (newDailyPointsCounter <= 0) {
+    if (dailyPointsCounter <= 0) {
       newDailyPointsCounter = appuser!.dailypoints;
     }
     setTotalPoints(optimisticTotalPoints);
@@ -58,19 +58,7 @@ const TapComponent: NextPage<TapComponentProps> = ({ totalPoints, setTotalPoints
 
     // Update total points on the backend
     try {
-      // const response0 = await fetch(`${apiUrl}/api/users/${chat_id}/gettotalpoints`, {
-      //   method: 'GET',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      // });
-      // if (!response0.ok) {
-      //   throw new Error('Network response was not ok');
-      // }
-
-      // const datatp = await response0.json();
-      // const newTotalPoints = datatp.totalpoints + number;
-
+      
       await fetch(`${apiUrl}/api/users/${chat_id}/updatetotalpoints`, {
         method: 'PUT',
         headers: {
@@ -78,19 +66,6 @@ const TapComponent: NextPage<TapComponentProps> = ({ totalPoints, setTotalPoints
         },
         body: JSON.stringify({ totalpoints: optimisticTotalPoints }),
       });
-
-      // const response1 = await fetch(`${apiUrl}/api/users/${chat_id}/getdailypointscounter`, {
-      //   method: 'GET',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      // });
-      // if (!response1.ok) {
-      //   throw new Error('Network response was not ok');
-      // }
-
-      // const data = await response1.json();
-      // const newdailypointscounter = data.dailypointscounter - number;
 
       await fetch(`${apiUrl}/api/users/${chat_id}/updatedailypointscounter`, {
         method: 'PUT',
