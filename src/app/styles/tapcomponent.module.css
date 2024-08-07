@@ -19,24 +19,19 @@
     text-align: center;
     z-index: 2;
   } 
-  .tapChild,
-  .tapimage {
-    position: relative;
-    max-width: 100%;
-    outline: none !important;
-  }
   .tapc {
     align-items: center;
     padding: 0 0;
     position: relative;
-    margin: 20px auto !important;
-    height: 300px;
+    margin: 0 auto !important;
+    height: 200px;
+    max-height: 200px;
     text-align: center;
     box-sizing: border-box;
     border-radius: 50%;
-    max-width: 300px;
-    padding: 60px;
-    background-color: var(--color-lightsandybrown);
+    max-width: 200px;
+    padding: 10px;
+    background-color: var(--color-lightsandybrowntapcomponent);
     outline: none !important;
   }
   .tapimage {

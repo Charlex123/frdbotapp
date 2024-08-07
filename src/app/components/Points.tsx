@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-
 import styles from "../styles/points.module.css";
 
 export type PointsType = {
@@ -8,8 +7,6 @@ export type PointsType = {
 };
 
 const Points: NextPage<PointsType> = ({ className = "", points }) => {
-  
-
   return (
     <>
       <div className={[styles.points, className].join(" ")}>
@@ -23,7 +20,7 @@ const Points: NextPage<PointsType> = ({ className = "", points }) => {
                 src="/group-9-2.svg"
               />
             </div>
-            <b className={styles.levelValue}>{points!.toLocaleString()}</b>
+            <b className={styles.levelValue}>{points?.toLocaleString()}</b>
           </div>
         </div>
       </div>

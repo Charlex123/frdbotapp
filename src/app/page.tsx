@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import type { NextPage } from "next";
 import { useAppUser } from './provider';
 import TopNav from "./components/TopNav";
@@ -13,6 +13,13 @@ import TapComponent from "./components/TapComponent";
 
 const Home: NextPage = () => {
   const { appuser, loading } = useAppUser();
+  const [totalPoints, setTotalPoints] = useState<number>(0);
+  
+  useEffect(() => {
+    if (appuser) {
+      setTotalPoints(appuser.totalpoints);
+    }
+  }, [appuser]);
 
   if (loading) {
     return <Loading />;
@@ -24,8 +31,8 @@ const Home: NextPage = () => {
         <Header />
         <div className={styles.mainc}>
           <TopNav />
-          {appuser ? <Points points={appuser.totalpoints} /> : <p>No user data available</p>}
-          <TapComponent />
+          {appuser ? <Points points={totalPoints} /> : <p>No user data available</p>}
+          <TapComponent totalPoints={totalPoints} setTotalPoints={setTotalPoints} />
           <Footer />
         </div>
       </div>

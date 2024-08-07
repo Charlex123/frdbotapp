@@ -1,5 +1,6 @@
 'use client';
-import { useState } from "react";
+import React from 'react';
+import { useState, useEffect } from "react";
 import type { NextPage } from "next";
 import styles from "../styles/tapcomponent.module.css";
 import Boost from "@/app/components/Boost";
@@ -7,12 +8,25 @@ import { useTelegram } from "../provider";
 import { useAppUser } from "../provider";
 import AnimatedText from "./AnimatedText";
 
-const TapComponent: NextPage = () => {
+interface TapComponentProps {
+  totalPoints: number;
+  setTotalPoints: React.Dispatch<React.SetStateAction<number>>;
+}
+
+const TapComponent: NextPage<TapComponentProps> = ({ totalPoints, setTotalPoints }) => {
   const [animations, setAnimations] = useState<{ id: number; x: number; y: number; number: number }[]>([]);
   const [bounce, setBounce] = useState<boolean>(false);
   const { user } = useTelegram();
+  const [dailyPointsCounter, setDailyPointsCounter] = useState<number>(0);
   const { appuser, fetchAndUpdateUser } = useAppUser();
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+  useEffect(() => {
+    if (appuser) {
+      setTotalPoints(appuser.totalpoints);
+      setDailyPointsCounter(appuser.dailypointscounter);
+    }
+  }, [appuser]);
 
   const handleImageClick = async (e: React.MouseEvent<HTMLImageElement>) => {
     if (!user) {
@@ -21,6 +35,7 @@ const TapComponent: NextPage = () => {
     }
 
     const chat_id = user.id;
+    // const chat_id = 730149343;
     const imgRect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - imgRect.left;
     const y = e.clientY - imgRect.top;
@@ -32,7 +47,13 @@ const TapComponent: NextPage = () => {
       { id, x, y, number }
     ]);
 
-    // update total points
+     // Optimistically update total points and daily points counter
+    const optimisticTotalPoints = totalPoints + number;
+    const optimisticDailyPointsCounter = dailyPointsCounter - number;
+    setTotalPoints(optimisticTotalPoints);
+    setDailyPointsCounter(optimisticDailyPointsCounter);
+
+    // Update total points on the backend
     try {
       const response0 = await fetch(`${apiUrl}/api/users/${chat_id}/gettotalpoints`, {
         method: 'GET',
@@ -77,16 +98,17 @@ const TapComponent: NextPage = () => {
       });
 
       // Refresh context here
-      await fetchAndUpdateUser(730149343);
+      await fetchAndUpdateUser(chat_id);
     } catch (error) {
+      // Revert the optimistic update if the request fails
+      setTotalPoints(totalPoints - number);
+      setDailyPointsCounter(dailyPointsCounter + number);
       console.error('Failed to update total points:', error);
     }
 
-   
-
     // Trigger the combined bounce animation
     setBounce(true);
-    setTimeout(() => setBounce(false), 1000); // Remove the class after the animation duration
+    setTimeout(() => setBounce(false), 100); // Remove the class after the animation duration
   };
 
   const handleAnimationEnd = (id: number) => {
@@ -113,7 +135,7 @@ const TapComponent: NextPage = () => {
           />
         ))}
       </div>
-      {appuser ? <Boost dailypoints={appuser.dailypoints} dailypointscounter={appuser.dailypointscounter}/> : ''}
+      {appuser ? <Boost dailypoints={appuser.dailypoints} dailypointscounter={dailyPointsCounter} /> : ''}
     </div>
   );
 };

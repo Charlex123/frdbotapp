@@ -153,7 +153,7 @@
     padding: 0 0 0 0;
     box-sizing: border-box;
     gap: var(--gap-xs);
-    margin: 20px auto;
+    margin: 0 auto 10px auto;
     text-align: left;
     font-size: var(--font-size-xs);
     color: var(--color-gray-100);
