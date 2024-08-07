@@ -26,7 +26,7 @@ const TapComponent: NextPage<TapComponentProps> = ({ totalPoints, setTotalPoints
       setTotalPoints(appuser.totalpoints);
       setDailyPointsCounter(appuser.dailypointscounter);
     }
-  }, [appuser]);
+  }, [appuser, setTotalPoints]);
 
   const handleImageClick = async (e: React.MouseEvent<HTMLImageElement>) => {
     if (!user) {
@@ -58,46 +58,46 @@ const TapComponent: NextPage<TapComponentProps> = ({ totalPoints, setTotalPoints
 
     // Update total points on the backend
     try {
-      const response0 = await fetch(`${apiUrl}/api/users/${chat_id}/gettotalpoints`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      if (!response0.ok) {
-        throw new Error('Network response was not ok');
-      }
+      // const response0 = await fetch(`${apiUrl}/api/users/${chat_id}/gettotalpoints`, {
+      //   method: 'GET',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      // });
+      // if (!response0.ok) {
+      //   throw new Error('Network response was not ok');
+      // }
 
-      const datatp = await response0.json();
-      const newTotalPoints = datatp.totalpoints + number;
+      // const datatp = await response0.json();
+      // const newTotalPoints = datatp.totalpoints + number;
 
       await fetch(`${apiUrl}/api/users/${chat_id}/updatetotalpoints`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ totalpoints: newTotalPoints }),
+        body: JSON.stringify({ totalpoints: optimisticTotalPoints }),
       });
 
-      const response1 = await fetch(`${apiUrl}/api/users/${chat_id}/getdailypointscounter`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      if (!response1.ok) {
-        throw new Error('Network response was not ok');
-      }
+      // const response1 = await fetch(`${apiUrl}/api/users/${chat_id}/getdailypointscounter`, {
+      //   method: 'GET',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      // });
+      // if (!response1.ok) {
+      //   throw new Error('Network response was not ok');
+      // }
 
-      const data = await response1.json();
-      const newdailypointscounter = data.dailypointscounter - number;
+      // const data = await response1.json();
+      // const newdailypointscounter = data.dailypointscounter - number;
 
       await fetch(`${apiUrl}/api/users/${chat_id}/updatedailypointscounter`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ dailypointscounter: newdailypointscounter }),
+        body: JSON.stringify({ dailypointscounter: newDailyPointsCounter }),
       });
 
       // Refresh context here
