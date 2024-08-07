@@ -25,7 +25,7 @@ const Mine: NextPage = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
-  
+
   return (
     <div className={styles.minemain}>
       {/* <img className={styles.unionIcon} alt="" src="/union.svg" /> */}
@@ -33,7 +33,7 @@ const Mine: NextPage = () => {
       <div className={styles.minec}>
         <DailyCombo />
         <div className={styles.mined}>
-          {appuser ? <Points points={appuser.totalpoints} /> : <p>No user data available</p>}
+          {appuser ? <Points points={totalPoints} /> : <p>No user data available</p>}
           <LicenseContainer />
           <MineTabs />
           <TapComponent totalPoints={totalPoints} setTotalPoints={setTotalPoints} />
