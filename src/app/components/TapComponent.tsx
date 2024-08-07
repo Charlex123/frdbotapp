@@ -49,9 +49,12 @@ const TapComponent: NextPage<TapComponentProps> = ({ totalPoints, setTotalPoints
 
      // Optimistically update total points and daily points counter
     const optimisticTotalPoints = totalPoints + number;
-    const optimisticDailyPointsCounter = dailyPointsCounter - number;
+    let newDailyPointsCounter = dailyPointsCounter - number;
+    if (newDailyPointsCounter <= 0) {
+      newDailyPointsCounter = appuser!.dailypoints;
+    }
     setTotalPoints(optimisticTotalPoints);
-    setDailyPointsCounter(optimisticDailyPointsCounter);
+    setDailyPointsCounter(newDailyPointsCounter);
 
     // Update total points on the backend
     try {
