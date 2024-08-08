@@ -89,7 +89,7 @@
 }
 .settings .settingslist .settingslistmainc .settingscon {
     background-color: var(--color-dimgray);border-radius: var(--br-11xl);
-    margin: 12px auto 12px auto;padding: var(--padding-sm) var(--padding-xs);
+    margin: 12px auto 12px auto;padding: var(--padding-xl) var(--padding-xs);
     display: flex;flex-direction: row;text-align: left;height: 20px;
     align-items: center;justify-content: space-between;
 }

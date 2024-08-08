@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import styles from "./styles/index.module.css";
 import Loading from './components/Loading'; 
 import "./styles/global.css";
+import Popup from './components/Popup';
 import TapComponent from "./components/TapComponent";
 
 const Home: NextPage = () => {
@@ -36,6 +37,7 @@ const Home: NextPage = () => {
           <Footer />
         </div>
       </div>
+      <Popup />
     </>
   );
 };

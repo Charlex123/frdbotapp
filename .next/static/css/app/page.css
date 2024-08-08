@@ -675,7 +675,7 @@
 }
 .exchanges_exchanges__JHrud .exchanges_exchangeslist__HfHQ0 .exchanges_exchangeslistmainc____0Oz .exchanges_exchangescon__8aeS0 .exchanges_exchangesimg__U__Ki {
     width: 40px;height: 40px;margin: auto;text-align: center;align-items: center;
-    align-self: center;padding: 0;padding-bottom: 5px;
+    align-self: center;padding: 0;padding: 0 2px 0 4px;
 }
 .exchanges_exchanges__JHrud .exchanges_exchangeslist__HfHQ0 .exchanges_exchangeslistmainc____0Oz .exchanges_exchangescon__8aeS0 .exchanges_img1__ul0xM {
     width: 20px;margin-top: -5px;
@@ -818,7 +818,7 @@
 }
 .settings_settings__WGEOJ .settings_settingslist__UiTCe .settings_settingslistmainc__79_9_ .settings_settingscon__1d9ko {
     background-color: var(--color-dimgray);border-radius: var(--br-11xl);
-    margin: 12px auto 12px auto;padding: var(--padding-sm) var(--padding-xs);
+    margin: 12px auto 12px auto;padding: var(--padding-xl) var(--padding-xs);
     display: flex;flex-direction: row;text-align: left;height: 20px;
     align-items: center;justify-content: space-between;
 }
@@ -936,6 +936,106 @@
 }
 .languagesdropdown_language__G_4pT .languagesdropdown_languagelist__ZHutC .languagesdropdown_languagelistmainc__GO6_S .languagesdropdown_languagecon__dY_bN .languagesdropdown_languageconb__pEH34 {
     display: flex;flex-direction: row;align-items: center;justify-content: flex-start;margin-right: 10px;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/deleteaccount.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+.deleteaccount_deleteaccount__C_oYB {color: var(--color-white);padding: var(--padding-xs) var(--padding-lg);font-family: var(--font-roboto);
+    top: 0;bottom: 0;left: 0;right: 0;height: 100vh;width: auto;
+    position: fixed;background-color: var(--color-dark-bg);z-index: 9999;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_close__Z3Qnv {
+    position: absolute;right: 2%;font-size: var(--font-size-lg);
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_deleteaccountc__MV76u {
+    width: 100%;    
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_header__RXSdb {
+    color: var(--color-white);margin: 15px auto;text-align: center;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_header__RXSdb h2 {
+    font-size: var(--font-size-5xl);
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_cearn__RQZ15 {
+    width: 100%;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_cearn__RQZ15 .deleteaccount_cearnc__5antO {
+    background-color: var(--color-dimgray);border-radius: var(--br-3xs);
+    display: flex;margin: 12px auto;flex-direction: row;align-items: center;padding-top: 0;padding-bottom: 8px;
+    justify-content: flex-start;font-size: var(--font-size-2xs);font-weight: 600;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_cearn__RQZ15 .deleteaccount_cearnc__5antO .deleteaccount_img__CIYhc {
+    width: 80px;height: 100px;margin-top: -5px;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_cearn__RQZ15 .deleteaccount_cearnc__5antO .deleteaccount_el__hhQEf {
+    display: flex;flex-direction: row;justify-content: flex-start;font-size: var(--font-size-2xs) !important;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_cearn__RQZ15 .deleteaccount_cearnc__5antO .deleteaccount_el__hhQEf .deleteaccount_img1__xAOho {
+    width: 20px;margin-top: -5px;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_mbonuses__4wHcj {
+    width: 100%;margin: auto;text-align: center;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_mbonuses__4wHcj > div {
+    width: 100%;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_mbonuses__4wHcj > div button {
+    color: var(--color-sandybrown);text-align: center;margin: 10px auto;
+    border: none;background-color: transparent;background-color: none;text-decoration: underline;
+    font-size: var(--font-size-xs);
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_mbonuses__4wHcj .deleteaccount_bonuseslist__mBBpb {
+    width: 100%;text-align: left;margin-left: 0;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_mbonuses__4wHcj .deleteaccount_bonuseslist__mBBpb h3 {
+    font-size: var(--font-size-xs);text-align: left;margin-left: 8%;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_mbonuses__4wHcj .deleteaccount_bonuseslist__mBBpb .deleteaccount_blisthead__nCuvC {
+    display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;
+    align-items: center;color: var(--color-gray-300);font-size: var(--font-size-xs);
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_mbonuses__4wHcj .deleteaccount_bonuseslist__mBBpb .deleteaccount_blisthead__nCuvC div {
+    text-align: left;margin: auto;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_mbonuses__4wHcj .deleteaccount_bonuseslist__mBBpb .deleteaccount_blistcon__hf038 {
+    width: 100%;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_mbonuses__4wHcj .deleteaccount_bonuseslist__mBBpb .deleteaccount_blistcon__hf038 div {
+    display: flex;flex-direction: row;align-items: center;justify-content: space-evenly;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_mbonuses__4wHcj .deleteaccount_bonuseslist__mBBpb .deleteaccount_blistcon__hf038 .deleteaccount_bcon__lPKHY {
+    background-color: var(--color-dimgray);border-radius: var(--br-3xs);
+    margin: 12px 0;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_mbonuses__4wHcj .deleteaccount_bonuseslist__mBBpb .deleteaccount_blistcon__hf038 .deleteaccount_bcon__lPKHY .deleteaccount_lvlname__qPcWU {
+    font-size: var(--font-size-xs);
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_mbonuses__4wHcj .deleteaccount_bonuseslist__mBBpb .deleteaccount_blistcon__hf038 .deleteaccount_bcon__lPKHY .deleteaccount_lvl__ZoWdm {
+    color: var(--color-lightgreen);font-size: var(--font-size-xs);
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_mbonuses__4wHcj .deleteaccount_bonuseslist__mBBpb .deleteaccount_blistcon__hf038 div .deleteaccount_img0__xlNKP {
+    width: 60px;margin-top: -5px;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_mbonuses__4wHcj .deleteaccount_bonuseslist__mBBpb .deleteaccount_blistcon__hf038 div .deleteaccount_img1__xAOho {
+    width: 20px;margin-top: -2px;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_deleteaccountlist__W3fZ5 {
+    margin: 40px 0;width: 100%;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_mbonuses__4wHcj .deleteaccount_bonuseslist__mBBpb .deleteaccount_blistcon__hf038 {
+    width: 100%;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_deleteaccountlist__W3fZ5 .deleteaccount_deleteaccountlistmainc__mIrbE {
+    width: 100%;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_deleteaccountlist__W3fZ5 .deleteaccount_deleteaccountlistmainc__mIrbE .deleteaccount_del_btns__x0STw {
+    margin: 40px auto;display: flex;justify-content: space-evenly;align-items: center;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_deleteaccountlist__W3fZ5 .deleteaccount_deleteaccountlistmainc__mIrbE .deleteaccount_del_btns__x0STw .deleteaccount_btn_cancel__xLLJ0 {
+    width: fit-content;padding: 6px 30px;background-color: var(--color-sandybrown);border-radius: 60px;
+}
+.deleteaccount_deleteaccount__C_oYB .deleteaccount_deleteaccountlist__W3fZ5 .deleteaccount_deleteaccountlistmainc__mIrbE .deleteaccount_del_btns__x0STw .deleteaccount_btn_delete__dFhSm {
+    width: fit-content;padding: 6px 30px;background-color: var(--color-bg-red);border-radius: 60px;
 }
 /*!****************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/points.module.css ***!
@@ -1929,6 +2029,7 @@ body {
   --color-lightsandybrown: rgb(247, 181, 12);
   --color-lightsandybrowntapcomponent: rgba(255, 255, 255, 0.796);
   --color-darksandybrown: #f799414e;
+  --color-bg-red: #f01523;
   --color-darkorange: #fe881c;
   --color-palegreen: #bfff97;
   --color-gold: #f9d838;
@@ -2081,6 +2182,44 @@ body {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/popup.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+.popup_popup___cJIE {
+  width: 100%;color: var(--color-white);padding: var(--padding-xs) var(--padding-lg);
+  font-family: var(--font-roboto);padding-bottom: 80px;background-color: var(--color-darkslategray-300);
+  position: fixed;bottom: 0;right: 0;left: 0;z-index: 999;
+  border-top-left-radius: 60px;border-top-right-radius: 60px;height: auto;box-shadow: 0px 0px 0px 2px #f1f1f1;
+}
+.popup_popup___cJIE .popup_popupc__Mj6T4 {
+  width: 100%;    
+}
+.popup_popup___cJIE .popup_worker__LkckB {
+  color: var(--color-sandybrown);
+}
+.popup_popup___cJIE .popup_header___kob7 {
+  color: var(--color-white);margin: 15px auto;text-align: center;
+}
+.popup_popup___cJIE .popup_header___kob7 h2 {
+  font-size: var(--font-size-21xl);
+}
+.popup_popup___cJIE .popup_popuplink__fiDtG {
+  width: 100%;
+} 
+.popup_popup___cJIE .popup_popuplist__VKJ8z h3, .popup_popup___cJIE .popup_popuplink__fiDtG h3 {
+  font-size: var(--font-size-xs);
+}
+.popup_popup___cJIE .popup_popupbtns__eqCWD {
+  width: 100%;margin: 10px 0;
+}
+.popup_popup___cJIE .popup_popuplink__fiDtG button.popup_sharebtn__sMtX6 {
+  background-color: var(--color-dimgreen);border-radius: var(--br-11xl);
+  padding: var(--padding-xs) var(--padding-4xs);font-size: var(--font-size-lg);
+  color: var(--color-white);border: none;width: 100%;align-self: flex-start;
+  font-weight: 600;
+}
+
 
 /*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/tapcomponent.module.css ***!

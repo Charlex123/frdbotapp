@@ -1,18 +1,31 @@
 'use client';
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
+import { useAppUser } from "../provider";
 import type { NextPage } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import styles from "../styles/bottomnav.module.css";
 
 export type BottomNavType = {
   className?: string;
 };
 
-const BottomNav: NextPage<BottomNavType> = ({ className = "" }) => {
-  const pathname = usePathname();
-  console.log("pathname",pathname)
+interface Option {
+  name: string;
+  image: string;
+}
 
+const BottomNav: NextPage<BottomNavType> = ({ className = ""}) => {
+  // const pathname = usePathname();
+  const { appuser } = useAppUser();
+  const selectedExchange = appuser?.exchange;
+  const exchanges: Option[] = [
+    { name: 'Binance', image: '/bnb-bnb-logo.svg' },
+    { name: 'OKX', image: '/okx-seeklogo.svg' },
+    { name: 'Kucoin', image: '/kucoin-token-kcs-logo.svg' },
+    { name: 'Bitget', image: '/bitget-token-new-bgb-logo.svg' },
+];
+
+const matchedExchange = exchanges.find(exchange => exchange.name === selectedExchange);
   return (
     <div className={[styles.bottomnavmain, className].join(" ")}>
       <div className={styles.bottomnavmainc}>
@@ -22,7 +35,7 @@ const BottomNav: NextPage<BottomNavType> = ({ className = "" }) => {
                 className={styles.icon}
                 loading="lazy"
                 alt=""
-                src="/union-2.svg"
+                src={matchedExchange?.image}
               />
               <div className={styles.txt}>Exchange</div>
           </Link>

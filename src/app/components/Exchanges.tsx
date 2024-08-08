@@ -1,7 +1,9 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { NextPage } from "next";
-import styles from "../styles/exchanges.module.css"
+import styles from "../styles/exchanges.module.css";
+import { useTelegram } from "../provider";
+import { useAppUser } from "../provider";
 import { FaChevronRight, FaXmark } from "react-icons/fa6";
 import TopHeader from "../components/TopHeader";
 
@@ -18,18 +20,39 @@ interface ExchangeProps {
 
 const Exchanges: NextPage<ExchangeProps> = ({ selectedexchange,toggleDisplay , onExchangeSelect}) => {
 
-    const [selectedExchange, setSelectedExchange] = useState<string>(selectedexchange);
+    const [exchange, setSelectedExchange] = useState<string>(selectedexchange);
+    const { user } = useTelegram();
+    const { fetchAndUpdateUser } = useAppUser();
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const chat_id = user!.id;
+    // const chat_id = 730149343;
 
-    const handleChange = (exchange: string) => {
+    useEffect(() => {
+        setSelectedExchange(selectedexchange);
+    }, [selectedexchange]);
+
+    const handleChange = async(exchange: string) => {
         setSelectedExchange(exchange);
-        if (toggleDisplay) {
-            toggleDisplay();
+        
+        try {
+            await fetch(`${apiUrl}/api/users/${chat_id}/updateexchange`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ exchange: exchange }),
+            });
+            await fetchAndUpdateUser(chat_id);  // Call fetchAndUpdateUser after updating exchange
+            onExchangeSelect(exchange);
+            toggleDisplay!;
+        } catch (error) {
+            console.error("Error updating exchange:", error);
         }
-        onExchangeSelect(exchange);
+
     };
 
     const exchanges: Option[] = [
-        { name: 'Binance', image: '/group-9-2.svg' },
+        { name: 'Binance', image: '/bnb-bnb-logo.svg' },
         { name: 'OKX', image: '/okx-seeklogo.svg' },
         { name: 'Kucoin', image: '/kucoin-token-kcs-logo.svg' },
         { name: 'Bitget', image: '/bitget-token-new-bgb-logo.svg' },
@@ -45,21 +68,6 @@ const Exchanges: NextPage<ExchangeProps> = ({ selectedexchange,toggleDisplay , o
                 <div className={styles.header}>
                     <h2>Exchanges</h2>
                 </div>
-
-                {/* {languages.map((lang, index) => (
-                    <div className={styles.languagecon} key={index} onClick={() => handleChange(lang.label)}>  
-                        <div className={styles.languagecona}>
-                            <div className={styles.languagedet}>
-                                <div className={styles.languagename}>
-                                    {lang.label}
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.languageconb}>
-                            <FaChevronRight />
-                        </div>
-                    </div>
-                ))} */}
 
                 <div className={styles.exchangeslist}>
                     <div className={styles.exchangeslistmain}>

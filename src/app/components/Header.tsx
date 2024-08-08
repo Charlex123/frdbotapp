@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { NextPage } from "next";
 import { useTelegram } from "../provider";
 import { useAppUser } from "../provider";
@@ -15,20 +15,33 @@ export type HeaderType = {
   className?: string;
 };
 
+interface Option {
+    name: string;
+    image: string;
+  }
+  
+
 const Header: NextPage<HeaderType> = ({ className = "" }) => {
     const { user } = useTelegram();
     const { appuser } = useAppUser();
     const [selectedExchange, setSelectedExchange] = useState<string>('');
-    const [exchanges, setExchanges] = useState(false);
+    const [isexchanges, setExchanges] = useState(false);
     const [settings, setSettings] = useState(false);
 
     const toggleExchangesDisplay = () => {
         setExchanges(prev => !prev);
     }
 
+    useEffect(() => {
+        if (appuser) {
+            setSelectedExchange(appuser.exchange);
+        }
+      }, [appuser, setSelectedExchange]);
+
     const handleExchangeSelect = (exchange: string) => {
         setSelectedExchange(exchange);
-        setExchanges(false); // Hide dropdown when a language is selected
+        console.log('selected exchange',selectedExchange)
+        setExchanges(prev => !prev); // Hide dropdown when a language is selected
     };
 
 
@@ -36,9 +49,18 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
         setSettings(prev => !prev)
     }
 
+    const exchanges: Option[] = [
+      { name: 'Binance', image: '/bnb-bnb-logo.svg' },
+      { name: 'OKX', image: '/okx-seeklogo.svg' },
+      { name: 'Kucoin', image: '/kucoin-token-kcs-logo.svg' },
+      { name: 'Bitget', image: '/bitget-token-new-bgb-logo.svg' },
+  ];
+  
+  const matchedExchange = exchanges.find(exchange => exchange.name === selectedExchange);
+  
     return (
         <>
-            {exchanges && <Exchanges selectedexchange={selectedExchange}  toggleDisplay={toggleExchangesDisplay} onExchangeSelect={handleExchangeSelect} />}
+            {isexchanges && <Exchanges selectedexchange={selectedExchange}  toggleDisplay={toggleExchangesDisplay} onExchangeSelect={handleExchangeSelect} />}
             {settings && <Settings toggleDisplay={toggleSettings} />}
             <div className={styles.head}>
                 <div className={styles.profile}>
@@ -71,7 +93,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
 
                     <div className={styles.details}>
                         <button type="button" onClick={toggleExchangesDisplay} style={{border: 'none', backgroundColor: 'none'}}>
-                            <img src="/union-2.svg" alt="pic" />
+                            <img src={matchedExchange?.image} loading="lazy" alt="pic" width={25} height={25} />
                         </button>
                         <div className={styles.b_earn}>
                             <div>profit per hour</div>

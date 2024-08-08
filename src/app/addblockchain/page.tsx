@@ -38,6 +38,15 @@ const UploadForm: React.FC = () => {
         },
       });
 
+      // Upload to Cloudinary
+      const cloudinary = new Cloudinary({ cloud_name: 'your_cloud_name', secure: true });
+      const cloudinaryResponse = await axios.post('https://api.cloudinary.com/v1_1/your_cloud_name/image/upload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      
       setMessage(response.data.message || 'Blockchain added successfully!');
     } catch (error) {
       setMessage('Error uploading data.');
